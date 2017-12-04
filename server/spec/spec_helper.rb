@@ -1,6 +1,12 @@
 ENV['RACK_ENV'] = 'test'
+
+require(File.expand_path('../lib/app', File.dirname(__FILE__)))
 require 'simplecov'
 require 'simplecov-console'
+require 'capybara/rspec'
+
+Capybara.app = MessageServer
+
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console
