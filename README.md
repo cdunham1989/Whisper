@@ -99,3 +99,10 @@ I want Whisper to generate a password for me
 * Clone the repository
 * Run the app using `   `
 * Run our tests using `   `
+
+## Collaborators
+
+* Lucy Borthwick
+* [Chris Dunham](https://github.com/cdunham1989)
+* [Hugo Sykes](https://github.com/hugosykes)
+* [Oliver Pople](https://github.com/oliverpople)
