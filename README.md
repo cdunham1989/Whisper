@@ -1,8 +1,33 @@
 # Whisper
 
+## Project Outline
+
+Our aim is to create a mobile messaging app with end-to-end encryption.
+
+## Working Methodologies
+
+* Agile
+* XP Values
+* Daily Stand-ups (10:00) and Retros (17:30)
+* Pairing (Aiming to switch driver every 15-20 minutes)
+* Use of Branches
+* Consulting team before merging pull requests
+* TDD (BDD) everything! Aiming for 100% test coverage
+* Focusing on communication with an open dialogue policy
+
+## Tech Stack
+
+* Swift
+* Inbuilt Xcode Testing Framework
+* Realm (db)
+* *ORM?*
+* *Test Coverage?*
+* *Feature test library?*
+
 ## User Stories
 
-### MVP
+**MVP**
+
 ```
 As a user,
 So that I can use Whisper,
@@ -29,7 +54,7 @@ So I know when I received a message,
 I want to see a timestamp on the message
 ```
 
-### Additional Features
+**Additional Features**
 
 ```
 As a user,
@@ -68,3 +93,9 @@ As a user,
 So that I know my password is secure,
 I want Whisper to generate a password for me
 ```
+
+## Running The App Locally
+
+* Clone the repository
+* Run the app using `   `
+* Run our tests using `   `
