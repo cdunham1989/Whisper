@@ -1,6 +1,6 @@
 ENV['RACK_ENV'] = 'test'
 
-require(File.expand_path('../lib/app', File.dirname(__FILE__)))
+require(File.expand_path('../app/app', File.dirname(__FILE__)))
 require 'simplecov'
 require 'simplecov-console'
 require 'capybara/rspec'
