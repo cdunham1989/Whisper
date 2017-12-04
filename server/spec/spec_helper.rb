@@ -7,7 +7,6 @@ require 'capybara/rspec'
 
 Capybara.app = MessageServer
 
-
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console
 ])
