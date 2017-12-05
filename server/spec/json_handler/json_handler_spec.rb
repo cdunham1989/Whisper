@@ -11,7 +11,7 @@ describe JSON_handler do
   end
 
   it 'should set instance variable of message' do
-    subject.accept({message: 'my message'})
+    subject.accept({'message': 'my message'})
     expect(subject.message).to eq 'my message'
   end
 end

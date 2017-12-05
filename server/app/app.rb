@@ -1,4 +1,6 @@
 require 'sinatra/base'
+require 'json'
+
 require(File.expand_path('lib/json_handler', File.dirname(__FILE__)))
 
 
@@ -10,6 +12,7 @@ class MessageServer < Sinatra::Base
   end
 
   post '/messages' do
+    json_handler.accept(params[:json_form_input])
     redirect '/messages/confirmation'
   end
 

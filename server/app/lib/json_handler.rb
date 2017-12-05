@@ -6,7 +6,13 @@ class JSON_handler
     @message = ''
   end
 
-  def accept(message)
-    @message = message[:message]
+  def accept(message_body)
+    message_body = verify_json(message_body)
+    @message = message_body['message']
   end
+
+  def verify_json(message_body)
+    return JSON.parse(message_body.to_json)
+  end
+
 end
