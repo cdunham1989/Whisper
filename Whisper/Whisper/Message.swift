@@ -11,23 +11,51 @@ import Foundation
 
 class Message {
     
+    typealias Codable = Decodable & Encodable
+    
     var text: String
-    var jsonString: String
+    var jsonS: String
     
     init() {
         text = ""
-        jsonString = ""
+        jsonS = ""
     }
     
     func inputText(input: String) {
         text += input
     }
     
-    func toJson() {
-        var array = [String]()
-        array.insert("message", at: 0)
-        array.insert(text, at: 1)
-        jsonString = "{ " + array[0] + ":" + array[1] + " }"
+    struct Message: Codable {
+        var text : String
     }
+    
+    func toJson() {
+        let upMessage = Message(text: self.text)
+        let jsonEncoder = JSONEncoder()
+        do {
+            let jsonData = try jsonEncoder.encode(upMessage)
+            let jsonString = String(data: jsonData, encoding: .utf8)
+            jsonS = jsonString!
+        }
+        catch {
+        }
+    }
+    
+//    func toJson() {
+//        var array = [String]()
+//        array.insert("message", at: 0)
+//        array.insert(text, at: 1)
+//        let jsonEncoder = JSONEncoder()
+//        do {
+//            let jsonData = try jsonEncoder.encode(array)
+//            let jsonString = String(data: jsonData, encoding: .utf8)
+//            print("JSON String : " + jsonString!)
+//        }
+//        catch {
+//        }
+//        jsonString = "{ " + array[0] + ":" + array[1] + " }"
+//
+//    }
+    
     
 }

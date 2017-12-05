@@ -11,6 +11,8 @@ import XCTest
 
 class MessageTests: XCTestCase {
     
+    typealias Codable = Decodable & Encodable
+    
     var message : Message!
     
     override func setUp() {
@@ -31,6 +33,7 @@ class MessageTests: XCTestCase {
     func testConvertTextToJSON() {
         let _ = message.inputText(input: "Hello")
         let _ = message.toJson()
-        XCTAssertEqual(message.jsonString, "{ message:Hello }")
+        print(message.jsonS)
+        XCTAssertEqual(message.jsonS, "{\"text\":\"Hello\"}")
     }
 }
