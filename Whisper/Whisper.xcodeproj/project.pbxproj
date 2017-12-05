@@ -15,10 +15,11 @@
 		193040981FD6CF3D00ABCD2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 193040961FD6CF3D00ABCD2A /* Main.storyboard */; };
 		1930409A1FD6CF3D00ABCD2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 193040991FD6CF3D00ABCD2A /* Assets.xcassets */; };
 		1930409D1FD6CF3D00ABCD2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1930409B1FD6CF3D00ABCD2A /* LaunchScreen.storyboard */; };
-		193040A81FD6CF3E00ABCD2A /* WhisperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193040A71FD6CF3E00ABCD2A /* WhisperTests.swift */; };
 		193040B31FD6CF3E00ABCD2A /* WhisperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193040B21FD6CF3E00ABCD2A /* WhisperUITests.swift */; };
 		1E5D46ED296B8F3709B0F77D /* Pods_WhisperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F1A2EEBA633F51EAD32BE0 /* Pods_WhisperUITests.framework */; };
 		4F04EE4D44759ECF89BAA8CC /* Pods_WhisperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A19457C4FCCBF92B2DECE5 /* Pods_WhisperTests.framework */; };
+		83A76F421FD6D44A002E4B95 /* MessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A76F411FD6D44A002E4B95 /* MessageTests.swift */; };
+		83A76F441FD6D5D8002E4B95 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A76F431FD6D5D8002E4B95 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +50,6 @@
 		1930409C1FD6CF3D00ABCD2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1930409E1FD6CF3D00ABCD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		193040A31FD6CF3E00ABCD2A /* WhisperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhisperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		193040A71FD6CF3E00ABCD2A /* WhisperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhisperTests.swift; sourceTree = "<group>"; };
 		193040A91FD6CF3E00ABCD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		193040AE1FD6CF3E00ABCD2A /* WhisperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhisperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		193040B21FD6CF3E00ABCD2A /* WhisperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhisperUITests.swift; sourceTree = "<group>"; };
@@ -60,6 +60,8 @@
 		59E8DA8E36AE305D0CA1BCD8 /* Pods-WhisperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhisperUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhisperUITests/Pods-WhisperUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		63A9881600EC57BC7356CC02 /* Pods-WhisperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhisperUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhisperUITests/Pods-WhisperUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7B3A3D86E6151DDE1957CC09 /* Pods-Whisper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whisper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whisper/Pods-Whisper.debug.xcconfig"; sourceTree = "<group>"; };
+		83A76F411FD6D44A002E4B95 /* MessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTests.swift; sourceTree = "<group>"; };
+		83A76F431FD6D5D8002E4B95 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		95A0AF4840BCD3AE97FA0114 /* Pods-WhisperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhisperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhisperTests/Pods-WhisperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A14CD79B2F152830E3EFFD1B /* Pods_Whisper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whisper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0A8E8A3FD186C64AC76824 /* Pods-WhisperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhisperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhisperTests/Pods-WhisperTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				193040991FD6CF3D00ABCD2A /* Assets.xcassets */,
 				1930409B1FD6CF3D00ABCD2A /* LaunchScreen.storyboard */,
 				1930409E1FD6CF3D00ABCD2A /* Info.plist */,
+				83A76F431FD6D5D8002E4B95 /* Message.swift */,
 			);
 			path = Whisper;
 			sourceTree = "<group>";
@@ -133,8 +136,8 @@
 		193040A61FD6CF3E00ABCD2A /* WhisperTests */ = {
 			isa = PBXGroup;
 			children = (
-				193040A71FD6CF3E00ABCD2A /* WhisperTests.swift */,
 				193040A91FD6CF3E00ABCD2A /* Info.plist */,
+				83A76F411FD6D44A002E4B95 /* MessageTests.swift */,
 			);
 			path = WhisperTests;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 					};
 					193040A21FD6CF3E00ABCD2A = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 1930408A1FD6CF3D00ABCD2A;
 					};
@@ -478,6 +482,7 @@
 			files = (
 				193040911FD6CF3D00ABCD2A /* RootViewController.swift in Sources */,
 				193040951FD6CF3D00ABCD2A /* ModelController.swift in Sources */,
+				83A76F441FD6D5D8002E4B95 /* Message.swift in Sources */,
 				193040931FD6CF3D00ABCD2A /* DataViewController.swift in Sources */,
 				1930408F1FD6CF3D00ABCD2A /* AppDelegate.swift in Sources */,
 			);
@@ -487,7 +492,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				193040A81FD6CF3E00ABCD2A /* WhisperTests.swift in Sources */,
+				83A76F421FD6D44A002E4B95 /* MessageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,11 +682,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WhisperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Me.WhisperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Whisper.app/Whisper";
@@ -694,6 +701,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WhisperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
