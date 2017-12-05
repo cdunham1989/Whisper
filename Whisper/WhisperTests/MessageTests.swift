@@ -23,8 +23,8 @@ class MessageTests: XCTestCase {
         super.tearDown()
     }
     
-    func testMessageInstantiation() {
-        
-       
+    func testCanInputText() {
+        let _ = message.inputText(input: "Hello")
+        XCTAssertTrue(message.text == "Hello")
     }
 }

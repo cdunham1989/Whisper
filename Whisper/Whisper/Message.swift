@@ -10,4 +10,14 @@ import Foundation
 
 class Message {
     
+    var text: String
+    
+    init() {
+        text = ""
+    }
+    
+    func inputText(input: String) {
+        text += input
+    }
+    
 }
