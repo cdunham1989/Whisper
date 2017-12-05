@@ -23,6 +23,9 @@ class Message {
         text += input
     }
     
+    func sendText() {
+      self.toJson()
+    }
     
     func toJson() {
         struct Message: Codable {
