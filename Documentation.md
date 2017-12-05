@@ -27,10 +27,10 @@ Today we set out to begin working towards our MVP. We decided to split our team 
 
 ## Important Documents
 
-[FizzBuzz Swift](https://medium.com/@ynzc/getting-started-with-tdd-in-swift-2fab3e07204b)
+[FizzBuzz Swift](https://medium.com/@ynzc/getting-started-with-tdd-in-swift-2fab3e07204b)   
 This is the walkthrough we used on day one to give us a starting point for using Swift. It also showed us how to effectively create an app using MVC in Swift.
 
-[Choosing an iOS Database](http://www.elitechsystems.com/which-database-you-should-choose-for-ios-application-development/)
+[Choosing an iOS Database](http://www.elitechsystems.com/which-database-you-should-choose-for-ios-application-development/)   
 This is the post we used that pointed us in the direction of using Realm as our database system for the application.
 
 [Libsignal-protocol-c](https://github.com/WhisperSystems/libsignal-protocol-c)
