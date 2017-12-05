@@ -13,3 +13,10 @@
 7. Redirect to /confirmation
 
 8. Show some 'confirmation json' stating whether the request was valid
+
+
+### JSON_handler object
+
+#### accept
+
+accepts json as an argument and sets an instance variable of message
