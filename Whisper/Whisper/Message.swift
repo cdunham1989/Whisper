@@ -27,11 +27,7 @@ class Message {
         var array = [String]()
         array.insert("message", at: 0)
         array.insert(text, at: 1)
-        if let json = try? JSONSerialization.data(withJSONObject: array, options: []) {
-            if let content = String(data: json, encoding: String.Encoding.utf8) {
-                jsonString += content
-            }
-        }
+        jsonString = "{ " + array[0] + ":" + array[1] + " }"
     }
     
 }

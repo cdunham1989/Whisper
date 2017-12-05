@@ -31,7 +31,6 @@ class MessageTests: XCTestCase {
     func testConvertTextToJSON() {
         let _ = message.inputText(input: "Hello")
         let _ = message.toJson()
-        XCTAssertTrue(message.jsonString == "{\"message\":\"Hello\"}")
-        //        "{\"message\":\"Hello\"}"
+        XCTAssertEqual(message.jsonString, "{ message:Hello }")
     }
 }
