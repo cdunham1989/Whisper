@@ -3,7 +3,7 @@ require(File.expand_path('../spec_helper', File.dirname(__FILE__)))
 feature 'Posting messages' do
   before do
     visit('/messages/new')
-    fill_in :json, with: "{'message': 'hello'}"
+    fill_in :json, with: {'message': 'hello'}
     click_button 'Submit'
   end
 
@@ -14,6 +14,4 @@ feature 'Posting messages' do
   scenario 'should display confirmation json' do
     expect(page).to have_content('true')
   end
-
-
 end
