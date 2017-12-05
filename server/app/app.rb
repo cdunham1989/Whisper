@@ -1,6 +1,4 @@
 require 'sinatra/base'
-require 'json'
-
 require(File.expand_path('lib/json_handler', File.dirname(__FILE__)))
 
 
@@ -17,6 +15,6 @@ class MessageServer < Sinatra::Base
   end
 
   get '/messages/confirmation' do
-    'true'
+    json_handler.confirmation
   end
 end
