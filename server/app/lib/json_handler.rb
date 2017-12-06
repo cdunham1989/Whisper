@@ -13,7 +13,7 @@ class JSON_handler
   end
 
   def confirmation
-    (@message != '').to_s
+    (@message != '' && !!@message).to_s
   end
 
   private
