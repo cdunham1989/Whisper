@@ -7,163 +7,169 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06F3F1D4F8EEFA4AB524C9A6 /* Pods_Whisper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B0AEE6D475290E40F35F66 /* Pods_Whisper.framework */; };
-		1968CEF01FD702A000CD5B2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968CEEF1FD702A000CD5B2A /* AppDelegate.swift */; };
-		1968CEF21FD702A000CD5B2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968CEF11FD702A000CD5B2A /* ViewController.swift */; };
-		1968CEF51FD702A000CD5B2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1968CEF31FD702A000CD5B2A /* Main.storyboard */; };
-		1968CEF71FD702A000CD5B2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1968CEF61FD702A000CD5B2A /* Assets.xcassets */; };
-		1968CEFA1FD702A000CD5B2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1968CEF81FD702A000CD5B2A /* LaunchScreen.storyboard */; };
-		1968CF101FD702A000CD5B2A /* WhisperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968CF0F1FD702A000CD5B2A /* WhisperUITests.swift */; };
-		1968CF1E1FD702F400CD5B2A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968CF1D1FD702F400CD5B2A /* Message.swift */; };
-		1968CF201FD7030A00CD5B2A /* MessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1968CF1F1FD7030A00CD5B2A /* MessageTests.swift */; };
-		5C57399AE9B0328F1E360872 /* Pods_WhisperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949B40319AD778087F7B9CB6 /* Pods_WhisperTests.framework */; };
-		6CB8B355B6BBC522D9C5F0ED /* Pods_WhisperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB7212D847511AC9C586B23 /* Pods_WhisperUITests.framework */; };
+		05E26720035BE4162A72F298 /* Pods_WhisperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A1DA636E9450C99FD2201C /* Pods_WhisperTests.framework */; };
+		0EAC85F21E712EE5E692BBA8 /* Pods_Whisper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D402C6D80EAE078F7C580090 /* Pods_Whisper.framework */; };
+		195630861FD81E4800BB857E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195630851FD81E4800BB857E /* AppDelegate.swift */; };
+		195630881FD81E4800BB857E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195630871FD81E4800BB857E /* ViewController.swift */; };
+		1956308B1FD81E4800BB857E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 195630891FD81E4800BB857E /* Main.storyboard */; };
+		1956308D1FD81E4800BB857E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1956308C1FD81E4800BB857E /* Assets.xcassets */; };
+		195630901FD81E4800BB857E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1956308E1FD81E4800BB857E /* LaunchScreen.storyboard */; };
+		1956309B1FD81E4800BB857E /* WhisperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956309A1FD81E4800BB857E /* WhisperTests.swift */; };
+		195630A61FD81E4800BB857E /* WhisperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195630A51FD81E4800BB857E /* WhisperUITests.swift */; };
+		195630B41FD81E7B00BB857E /* GoogleService-Info (2).plist in Resources */ = {isa = PBXBuildFile; fileRef = 195630B31FD81E7B00BB857E /* GoogleService-Info (2).plist */; };
+		19B642851FD8229700EF5166 /* MessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B642841FD8229700EF5166 /* MessageTests.swift */; };
+		19B642871FD822B200EF5166 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B642861FD822B200EF5166 /* Message.swift */; };
+		BE7C5EE64FDA8AF89BF42770 /* Pods_WhisperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0807CA13377DEA786CC594D4 /* Pods_WhisperUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1968CF011FD702A000CD5B2A /* PBXContainerItemProxy */ = {
+		195630971FD81E4800BB857E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1968CEE41FD702A000CD5B2A /* Project object */;
+			containerPortal = 1956307A1FD81E4800BB857E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1968CEEB1FD702A000CD5B2A;
+			remoteGlobalIDString = 195630811FD81E4800BB857E;
 			remoteInfo = Whisper;
 		};
-		1968CF0C1FD702A000CD5B2A /* PBXContainerItemProxy */ = {
+		195630A21FD81E4800BB857E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1968CEE41FD702A000CD5B2A /* Project object */;
+			containerPortal = 1956307A1FD81E4800BB857E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1968CEEB1FD702A000CD5B2A;
+			remoteGlobalIDString = 195630811FD81E4800BB857E;
 			remoteInfo = Whisper;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F0181343A64AAC8C850C735 /* Pods-Whisper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whisper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whisper/Pods-Whisper.release.xcconfig"; sourceTree = "<group>"; };
-		111FDDB8B26830F29D215B09 /* Pods-WhisperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhisperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhisperTests/Pods-WhisperTests.release.xcconfig"; sourceTree = "<group>"; };
-		1968CEEC1FD702A000CD5B2A /* Whisper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whisper.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1968CEEF1FD702A000CD5B2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1968CEF11FD702A000CD5B2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1968CEF41FD702A000CD5B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1968CEF61FD702A000CD5B2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1968CEF91FD702A000CD5B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1968CEFB1FD702A000CD5B2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1968CF001FD702A000CD5B2A /* WhisperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhisperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1968CF061FD702A000CD5B2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1968CF0B1FD702A000CD5B2A /* WhisperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhisperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1968CF0F1FD702A000CD5B2A /* WhisperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhisperUITests.swift; sourceTree = "<group>"; };
-		1968CF111FD702A000CD5B2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1968CF1D1FD702F400CD5B2A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		1968CF1F1FD7030A00CD5B2A /* MessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTests.swift; sourceTree = "<group>"; };
-		59B0AEE6D475290E40F35F66 /* Pods_Whisper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whisper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6020ED2EF212385B81D0492A /* Pods-Whisper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whisper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whisper/Pods-Whisper.debug.xcconfig"; sourceTree = "<group>"; };
-		8F634E8D73C7E1993E3C715F /* Pods-WhisperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhisperUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhisperUITests/Pods-WhisperUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		949B40319AD778087F7B9CB6 /* Pods_WhisperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhisperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA8439D3DB7B8F06FC1F0217 /* Pods-WhisperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhisperUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhisperUITests/Pods-WhisperUITests.release.xcconfig"; sourceTree = "<group>"; };
-		ADB7212D847511AC9C586B23 /* Pods_WhisperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhisperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D53C4D7B386B625AAB15CADA /* Pods-WhisperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhisperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhisperTests/Pods-WhisperTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0807CA13377DEA786CC594D4 /* Pods_WhisperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhisperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		195630821FD81E4800BB857E /* Whisper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whisper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		195630851FD81E4800BB857E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		195630871FD81E4800BB857E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1956308A1FD81E4800BB857E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1956308C1FD81E4800BB857E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1956308F1FD81E4800BB857E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		195630911FD81E4800BB857E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		195630961FD81E4800BB857E /* WhisperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhisperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1956309A1FD81E4800BB857E /* WhisperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhisperTests.swift; sourceTree = "<group>"; };
+		1956309C1FD81E4800BB857E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		195630A11FD81E4800BB857E /* WhisperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhisperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		195630A51FD81E4800BB857E /* WhisperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhisperUITests.swift; sourceTree = "<group>"; };
+		195630A71FD81E4800BB857E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		195630B31FD81E7B00BB857E /* GoogleService-Info (2).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (2).plist"; sourceTree = "<group>"; };
+		19B642841FD8229700EF5166 /* MessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTests.swift; sourceTree = "<group>"; };
+		19B642861FD822B200EF5166 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		32C04CF6B530973D3F3C2363 /* Pods-Whisper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whisper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whisper/Pods-Whisper.release.xcconfig"; sourceTree = "<group>"; };
+		3375D35140B927A0AC0F42C0 /* Pods-WhisperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhisperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhisperTests/Pods-WhisperTests.release.xcconfig"; sourceTree = "<group>"; };
+		3B807CC2A75CBECFBF4AEB65 /* Pods-WhisperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhisperUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhisperUITests/Pods-WhisperUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5CB22BF02806F06491463C4B /* Pods-WhisperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhisperUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhisperUITests/Pods-WhisperUITests.release.xcconfig"; sourceTree = "<group>"; };
+		74A1DA636E9450C99FD2201C /* Pods_WhisperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhisperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B6CF3D00C6951E068BCF6D5 /* Pods-Whisper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whisper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whisper/Pods-Whisper.debug.xcconfig"; sourceTree = "<group>"; };
+		A0D953D6963C78C3950E356A /* Pods-WhisperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhisperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhisperTests/Pods-WhisperTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D402C6D80EAE078F7C580090 /* Pods_Whisper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whisper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1968CEE91FD702A000CD5B2A /* Frameworks */ = {
+		1956307F1FD81E4800BB857E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06F3F1D4F8EEFA4AB524C9A6 /* Pods_Whisper.framework in Frameworks */,
+				0EAC85F21E712EE5E692BBA8 /* Pods_Whisper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1968CEFD1FD702A000CD5B2A /* Frameworks */ = {
+		195630931FD81E4800BB857E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C57399AE9B0328F1E360872 /* Pods_WhisperTests.framework in Frameworks */,
+				05E26720035BE4162A72F298 /* Pods_WhisperTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1968CF081FD702A000CD5B2A /* Frameworks */ = {
+		1956309E1FD81E4800BB857E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CB8B355B6BBC522D9C5F0ED /* Pods_WhisperUITests.framework in Frameworks */,
+				BE7C5EE64FDA8AF89BF42770 /* Pods_WhisperUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		163080818D23AC0A7C43A8D7 /* Frameworks */ = {
+		195630791FD81E4800BB857E = {
 			isa = PBXGroup;
 			children = (
-				59B0AEE6D475290E40F35F66 /* Pods_Whisper.framework */,
-				949B40319AD778087F7B9CB6 /* Pods_WhisperTests.framework */,
-				ADB7212D847511AC9C586B23 /* Pods_WhisperUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1968CEE31FD702A000CD5B2A = {
-			isa = PBXGroup;
-			children = (
-				1968CEEE1FD702A000CD5B2A /* Whisper */,
-				1968CF031FD702A000CD5B2A /* WhisperTests */,
-				1968CF0E1FD702A000CD5B2A /* WhisperUITests */,
-				1968CEED1FD702A000CD5B2A /* Products */,
-				4EBA7E4D9DB7377DDDB2E1B7 /* Pods */,
-				163080818D23AC0A7C43A8D7 /* Frameworks */,
+				195630841FD81E4800BB857E /* Whisper */,
+				195630991FD81E4800BB857E /* WhisperTests */,
+				195630A41FD81E4800BB857E /* WhisperUITests */,
+				195630831FD81E4800BB857E /* Products */,
+				7FBD47BB1514AA58137C8DDB /* Pods */,
+				5737E036EE8CD2F0AF7A1668 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		1968CEED1FD702A000CD5B2A /* Products */ = {
+		195630831FD81E4800BB857E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1968CEEC1FD702A000CD5B2A /* Whisper.app */,
-				1968CF001FD702A000CD5B2A /* WhisperTests.xctest */,
-				1968CF0B1FD702A000CD5B2A /* WhisperUITests.xctest */,
+				195630821FD81E4800BB857E /* Whisper.app */,
+				195630961FD81E4800BB857E /* WhisperTests.xctest */,
+				195630A11FD81E4800BB857E /* WhisperUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1968CEEE1FD702A000CD5B2A /* Whisper */ = {
+		195630841FD81E4800BB857E /* Whisper */ = {
 			isa = PBXGroup;
 			children = (
-				1968CEEF1FD702A000CD5B2A /* AppDelegate.swift */,
-				1968CEF11FD702A000CD5B2A /* ViewController.swift */,
-				1968CEF31FD702A000CD5B2A /* Main.storyboard */,
-				1968CEF61FD702A000CD5B2A /* Assets.xcassets */,
-				1968CEF81FD702A000CD5B2A /* LaunchScreen.storyboard */,
-				1968CEFB1FD702A000CD5B2A /* Info.plist */,
-				1968CF1D1FD702F400CD5B2A /* Message.swift */,
+				195630851FD81E4800BB857E /* AppDelegate.swift */,
+				195630871FD81E4800BB857E /* ViewController.swift */,
+				195630891FD81E4800BB857E /* Main.storyboard */,
+				1956308C1FD81E4800BB857E /* Assets.xcassets */,
+				1956308E1FD81E4800BB857E /* LaunchScreen.storyboard */,
+				195630B31FD81E7B00BB857E /* GoogleService-Info (2).plist */,
+				195630911FD81E4800BB857E /* Info.plist */,
+				19B642861FD822B200EF5166 /* Message.swift */,
 			);
 			path = Whisper;
 			sourceTree = "<group>";
 		};
-		1968CF031FD702A000CD5B2A /* WhisperTests */ = {
+		195630991FD81E4800BB857E /* WhisperTests */ = {
 			isa = PBXGroup;
 			children = (
-				1968CF061FD702A000CD5B2A /* Info.plist */,
-				1968CF1F1FD7030A00CD5B2A /* MessageTests.swift */,
+				1956309A1FD81E4800BB857E /* WhisperTests.swift */,
+				1956309C1FD81E4800BB857E /* Info.plist */,
+				19B642841FD8229700EF5166 /* MessageTests.swift */,
 			);
 			path = WhisperTests;
 			sourceTree = "<group>";
 		};
-		1968CF0E1FD702A000CD5B2A /* WhisperUITests */ = {
+		195630A41FD81E4800BB857E /* WhisperUITests */ = {
 			isa = PBXGroup;
 			children = (
-				1968CF0F1FD702A000CD5B2A /* WhisperUITests.swift */,
-				1968CF111FD702A000CD5B2A /* Info.plist */,
+				195630A51FD81E4800BB857E /* WhisperUITests.swift */,
+				195630A71FD81E4800BB857E /* Info.plist */,
 			);
 			path = WhisperUITests;
 			sourceTree = "<group>";
 		};
-		4EBA7E4D9DB7377DDDB2E1B7 /* Pods */ = {
+		5737E036EE8CD2F0AF7A1668 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6020ED2EF212385B81D0492A /* Pods-Whisper.debug.xcconfig */,
-				0F0181343A64AAC8C850C735 /* Pods-Whisper.release.xcconfig */,
-				D53C4D7B386B625AAB15CADA /* Pods-WhisperTests.debug.xcconfig */,
-				111FDDB8B26830F29D215B09 /* Pods-WhisperTests.release.xcconfig */,
-				8F634E8D73C7E1993E3C715F /* Pods-WhisperUITests.debug.xcconfig */,
-				AA8439D3DB7B8F06FC1F0217 /* Pods-WhisperUITests.release.xcconfig */,
+				D402C6D80EAE078F7C580090 /* Pods_Whisper.framework */,
+				74A1DA636E9450C99FD2201C /* Pods_WhisperTests.framework */,
+				0807CA13377DEA786CC594D4 /* Pods_WhisperUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7FBD47BB1514AA58137C8DDB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B6CF3D00C6951E068BCF6D5 /* Pods-Whisper.debug.xcconfig */,
+				32C04CF6B530973D3F3C2363 /* Pods-Whisper.release.xcconfig */,
+				A0D953D6963C78C3950E356A /* Pods-WhisperTests.debug.xcconfig */,
+				3375D35140B927A0AC0F42C0 /* Pods-WhisperTests.release.xcconfig */,
+				3B807CC2A75CBECFBF4AEB65 /* Pods-WhisperUITests.debug.xcconfig */,
+				5CB22BF02806F06491463C4B /* Pods-WhisperUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -171,16 +177,16 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1968CEEB1FD702A000CD5B2A /* Whisper */ = {
+		195630811FD81E4800BB857E /* Whisper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1968CF141FD702A000CD5B2A /* Build configuration list for PBXNativeTarget "Whisper" */;
+			buildConfigurationList = 195630AA1FD81E4800BB857E /* Build configuration list for PBXNativeTarget "Whisper" */;
 			buildPhases = (
-				2659CB7358794F2AFBA37A93 /* [CP] Check Pods Manifest.lock */,
-				1968CEE81FD702A000CD5B2A /* Sources */,
-				1968CEE91FD702A000CD5B2A /* Frameworks */,
-				1968CEEA1FD702A000CD5B2A /* Resources */,
-				FD7B1E6DA4B68BFCBAB65C1C /* [CP] Embed Pods Frameworks */,
-				39AD2E28998EDE44C5B7E719 /* [CP] Copy Pods Resources */,
+				D73C6961B26E277473C89C54 /* [CP] Check Pods Manifest.lock */,
+				1956307E1FD81E4800BB857E /* Sources */,
+				1956307F1FD81E4800BB857E /* Frameworks */,
+				195630801FD81E4800BB857E /* Resources */,
+				CE627070C743CF9F33AC1C98 /* [CP] Embed Pods Frameworks */,
+				37C8BA8CF9A50DC9CD875F0F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,78 +194,78 @@
 			);
 			name = Whisper;
 			productName = Whisper;
-			productReference = 1968CEEC1FD702A000CD5B2A /* Whisper.app */;
+			productReference = 195630821FD81E4800BB857E /* Whisper.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1968CEFF1FD702A000CD5B2A /* WhisperTests */ = {
+		195630951FD81E4800BB857E /* WhisperTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1968CF171FD702A000CD5B2A /* Build configuration list for PBXNativeTarget "WhisperTests" */;
+			buildConfigurationList = 195630AD1FD81E4800BB857E /* Build configuration list for PBXNativeTarget "WhisperTests" */;
 			buildPhases = (
-				7143892A64317AA7F8202218 /* [CP] Check Pods Manifest.lock */,
-				1968CEFC1FD702A000CD5B2A /* Sources */,
-				1968CEFD1FD702A000CD5B2A /* Frameworks */,
-				1968CEFE1FD702A000CD5B2A /* Resources */,
-				3ECCA77F1ED9259D5EAC048A /* [CP] Embed Pods Frameworks */,
-				B4341126CE4FC30722ABA8A0 /* [CP] Copy Pods Resources */,
+				32BEF2B8BE22D8AE74CA27D4 /* [CP] Check Pods Manifest.lock */,
+				195630921FD81E4800BB857E /* Sources */,
+				195630931FD81E4800BB857E /* Frameworks */,
+				195630941FD81E4800BB857E /* Resources */,
+				2DA27191E1AB278338675F09 /* [CP] Embed Pods Frameworks */,
+				88EB0256551A68CA99F85DB6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1968CF021FD702A000CD5B2A /* PBXTargetDependency */,
+				195630981FD81E4800BB857E /* PBXTargetDependency */,
 			);
 			name = WhisperTests;
 			productName = WhisperTests;
-			productReference = 1968CF001FD702A000CD5B2A /* WhisperTests.xctest */;
+			productReference = 195630961FD81E4800BB857E /* WhisperTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1968CF0A1FD702A000CD5B2A /* WhisperUITests */ = {
+		195630A01FD81E4800BB857E /* WhisperUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1968CF1A1FD702A000CD5B2A /* Build configuration list for PBXNativeTarget "WhisperUITests" */;
+			buildConfigurationList = 195630B01FD81E4800BB857E /* Build configuration list for PBXNativeTarget "WhisperUITests" */;
 			buildPhases = (
-				302D2A03272C28D6FBF3EFEA /* [CP] Check Pods Manifest.lock */,
-				1968CF071FD702A000CD5B2A /* Sources */,
-				1968CF081FD702A000CD5B2A /* Frameworks */,
-				1968CF091FD702A000CD5B2A /* Resources */,
-				0EC984279F5D2CF5FEDC89EC /* [CP] Embed Pods Frameworks */,
-				8A0935A49CEF9AAE3B006B4F /* [CP] Copy Pods Resources */,
+				84D4CA0EF066867A7ACAFA22 /* [CP] Check Pods Manifest.lock */,
+				1956309D1FD81E4800BB857E /* Sources */,
+				1956309E1FD81E4800BB857E /* Frameworks */,
+				1956309F1FD81E4800BB857E /* Resources */,
+				D6A8D45DF67C4D58C7FD23D1 /* [CP] Embed Pods Frameworks */,
+				FB4BA0D268C037DA654F83A9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1968CF0D1FD702A000CD5B2A /* PBXTargetDependency */,
+				195630A31FD81E4800BB857E /* PBXTargetDependency */,
 			);
 			name = WhisperUITests;
 			productName = WhisperUITests;
-			productReference = 1968CF0B1FD702A000CD5B2A /* WhisperUITests.xctest */;
+			productReference = 195630A11FD81E4800BB857E /* WhisperUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1968CEE41FD702A000CD5B2A /* Project object */ = {
+		1956307A1FD81E4800BB857E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Lucy Borthwick";
 				TargetAttributes = {
-					1968CEEB1FD702A000CD5B2A = {
+					195630811FD81E4800BB857E = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
-					1968CEFF1FD702A000CD5B2A = {
+					195630951FD81E4800BB857E = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 1968CEEB1FD702A000CD5B2A;
+						TestTargetID = 195630811FD81E4800BB857E;
 					};
-					1968CF0A1FD702A000CD5B2A = {
+					195630A01FD81E4800BB857E = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 1968CEEB1FD702A000CD5B2A;
+						TestTargetID = 195630811FD81E4800BB857E;
 					};
 				};
 			};
-			buildConfigurationList = 1968CEE71FD702A000CD5B2A /* Build configuration list for PBXProject "Whisper" */;
+			buildConfigurationList = 1956307D1FD81E4800BB857E /* Build configuration list for PBXProject "Whisper" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -267,37 +273,38 @@
 				en,
 				Base,
 			);
-			mainGroup = 1968CEE31FD702A000CD5B2A;
-			productRefGroup = 1968CEED1FD702A000CD5B2A /* Products */;
+			mainGroup = 195630791FD81E4800BB857E;
+			productRefGroup = 195630831FD81E4800BB857E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1968CEEB1FD702A000CD5B2A /* Whisper */,
-				1968CEFF1FD702A000CD5B2A /* WhisperTests */,
-				1968CF0A1FD702A000CD5B2A /* WhisperUITests */,
+				195630811FD81E4800BB857E /* Whisper */,
+				195630951FD81E4800BB857E /* WhisperTests */,
+				195630A01FD81E4800BB857E /* WhisperUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1968CEEA1FD702A000CD5B2A /* Resources */ = {
+		195630801FD81E4800BB857E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1968CEFA1FD702A000CD5B2A /* LaunchScreen.storyboard in Resources */,
-				1968CEF71FD702A000CD5B2A /* Assets.xcassets in Resources */,
-				1968CEF51FD702A000CD5B2A /* Main.storyboard in Resources */,
+				195630B41FD81E7B00BB857E /* GoogleService-Info (2).plist in Resources */,
+				195630901FD81E4800BB857E /* LaunchScreen.storyboard in Resources */,
+				1956308D1FD81E4800BB857E /* Assets.xcassets in Resources */,
+				1956308B1FD81E4800BB857E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1968CEFE1FD702A000CD5B2A /* Resources */ = {
+		195630941FD81E4800BB857E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1968CF091FD702A000CD5B2A /* Resources */ = {
+		1956309F1FD81E4800BB857E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -307,73 +314,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0EC984279F5D2CF5FEDC89EC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhisperUITests/Pods-WhisperUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2659CB7358794F2AFBA37A93 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Whisper-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		302D2A03272C28D6FBF3EFEA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WhisperUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		39AD2E28998EDE44C5B7E719 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Whisper/Pods-Whisper-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3ECCA77F1ED9259D5EAC048A /* [CP] Embed Pods Frameworks */ = {
+		2DA27191E1AB278338675F09 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -388,7 +329,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhisperTests/Pods-WhisperTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7143892A64317AA7F8202218 /* [CP] Check Pods Manifest.lock */ = {
+		32BEF2B8BE22D8AE74CA27D4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -406,7 +347,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8A0935A49CEF9AAE3B006B4F /* [CP] Copy Pods Resources */ = {
+		37C8BA8CF9A50DC9CD875F0F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -418,10 +359,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhisperUITests/Pods-WhisperUITests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Whisper/Pods-Whisper-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B4341126CE4FC30722ABA8A0 /* [CP] Copy Pods Resources */ = {
+		84D4CA0EF066867A7ACAFA22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhisperUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88EB0256551A68CA99F85DB6 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -436,83 +395,134 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhisperTests/Pods-WhisperTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FD7B1E6DA4B68BFCBAB65C1C /* [CP] Embed Pods Frameworks */ = {
+		CE627070C743CF9F33AC1C98 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Whisper/Pods-Whisper-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Whisper/Pods-Whisper-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D6A8D45DF67C4D58C7FD23D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhisperUITests/Pods-WhisperUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D73C6961B26E277473C89C54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Whisper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB4BA0D268C037DA654F83A9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhisperUITests/Pods-WhisperUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1968CEE81FD702A000CD5B2A /* Sources */ = {
+		1956307E1FD81E4800BB857E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1968CEF21FD702A000CD5B2A /* ViewController.swift in Sources */,
-				1968CF1E1FD702F400CD5B2A /* Message.swift in Sources */,
-				1968CEF01FD702A000CD5B2A /* AppDelegate.swift in Sources */,
+				19B642871FD822B200EF5166 /* Message.swift in Sources */,
+				195630881FD81E4800BB857E /* ViewController.swift in Sources */,
+				195630861FD81E4800BB857E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1968CEFC1FD702A000CD5B2A /* Sources */ = {
+		195630921FD81E4800BB857E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1968CF201FD7030A00CD5B2A /* MessageTests.swift in Sources */,
+				1956309B1FD81E4800BB857E /* WhisperTests.swift in Sources */,
+				19B642851FD8229700EF5166 /* MessageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1968CF071FD702A000CD5B2A /* Sources */ = {
+		1956309D1FD81E4800BB857E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1968CF101FD702A000CD5B2A /* WhisperUITests.swift in Sources */,
+				195630A61FD81E4800BB857E /* WhisperUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1968CF021FD702A000CD5B2A /* PBXTargetDependency */ = {
+		195630981FD81E4800BB857E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1968CEEB1FD702A000CD5B2A /* Whisper */;
-			targetProxy = 1968CF011FD702A000CD5B2A /* PBXContainerItemProxy */;
+			target = 195630811FD81E4800BB857E /* Whisper */;
+			targetProxy = 195630971FD81E4800BB857E /* PBXContainerItemProxy */;
 		};
-		1968CF0D1FD702A000CD5B2A /* PBXTargetDependency */ = {
+		195630A31FD81E4800BB857E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1968CEEB1FD702A000CD5B2A /* Whisper */;
-			targetProxy = 1968CF0C1FD702A000CD5B2A /* PBXContainerItemProxy */;
+			target = 195630811FD81E4800BB857E /* Whisper */;
+			targetProxy = 195630A21FD81E4800BB857E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1968CEF31FD702A000CD5B2A /* Main.storyboard */ = {
+		195630891FD81E4800BB857E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1968CEF41FD702A000CD5B2A /* Base */,
+				1956308A1FD81E4800BB857E /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		1968CEF81FD702A000CD5B2A /* LaunchScreen.storyboard */ = {
+		1956308E1FD81E4800BB857E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1968CEF91FD702A000CD5B2A /* Base */,
+				1956308F1FD81E4800BB857E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -520,7 +530,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1968CF121FD702A000CD5B2A /* Debug */ = {
+		195630A81FD81E4800BB857E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -577,7 +587,7 @@
 			};
 			name = Debug;
 		};
-		1968CF131FD702A000CD5B2A /* Release */ = {
+		195630A91FD81E4800BB857E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -627,46 +637,46 @@
 			};
 			name = Release;
 		};
-		1968CF151FD702A000CD5B2A /* Debug */ = {
+		195630AB1FD81E4800BB857E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6020ED2EF212385B81D0492A /* Pods-Whisper.debug.xcconfig */;
+			baseConfigurationReference = 8B6CF3D00C6951E068BCF6D5 /* Pods-Whisper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Whisper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Me.Whisper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.me.Whisper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		1968CF161FD702A000CD5B2A /* Release */ = {
+		195630AC1FD81E4800BB857E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F0181343A64AAC8C850C735 /* Pods-Whisper.release.xcconfig */;
+			baseConfigurationReference = 32C04CF6B530973D3F3C2363 /* Pods-Whisper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Whisper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Me.Whisper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.me.Whisper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		1968CF181FD702A000CD5B2A /* Debug */ = {
+		195630AE1FD81E4800BB857E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D53C4D7B386B625AAB15CADA /* Pods-WhisperTests.debug.xcconfig */;
+			baseConfigurationReference = A0D953D6963C78C3950E356A /* Pods-WhisperTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WhisperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Me.WhisperTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.me.WhisperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -674,16 +684,16 @@
 			};
 			name = Debug;
 		};
-		1968CF191FD702A000CD5B2A /* Release */ = {
+		195630AF1FD81E4800BB857E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 111FDDB8B26830F29D215B09 /* Pods-WhisperTests.release.xcconfig */;
+			baseConfigurationReference = 3375D35140B927A0AC0F42C0 /* Pods-WhisperTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WhisperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Me.WhisperTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.me.WhisperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -691,15 +701,15 @@
 			};
 			name = Release;
 		};
-		1968CF1B1FD702A000CD5B2A /* Debug */ = {
+		195630B11FD81E4800BB857E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F634E8D73C7E1993E3C715F /* Pods-WhisperUITests.debug.xcconfig */;
+			baseConfigurationReference = 3B807CC2A75CBECFBF4AEB65 /* Pods-WhisperUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WhisperUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Me.WhisperUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.me.WhisperUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -707,15 +717,15 @@
 			};
 			name = Debug;
 		};
-		1968CF1C1FD702A000CD5B2A /* Release */ = {
+		195630B21FD81E4800BB857E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA8439D3DB7B8F06FC1F0217 /* Pods-WhisperUITests.release.xcconfig */;
+			baseConfigurationReference = 5CB22BF02806F06491463C4B /* Pods-WhisperUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WhisperUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Me.WhisperUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.me.WhisperUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -726,43 +736,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1968CEE71FD702A000CD5B2A /* Build configuration list for PBXProject "Whisper" */ = {
+		1956307D1FD81E4800BB857E /* Build configuration list for PBXProject "Whisper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1968CF121FD702A000CD5B2A /* Debug */,
-				1968CF131FD702A000CD5B2A /* Release */,
+				195630A81FD81E4800BB857E /* Debug */,
+				195630A91FD81E4800BB857E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1968CF141FD702A000CD5B2A /* Build configuration list for PBXNativeTarget "Whisper" */ = {
+		195630AA1FD81E4800BB857E /* Build configuration list for PBXNativeTarget "Whisper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1968CF151FD702A000CD5B2A /* Debug */,
-				1968CF161FD702A000CD5B2A /* Release */,
+				195630AB1FD81E4800BB857E /* Debug */,
+				195630AC1FD81E4800BB857E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1968CF171FD702A000CD5B2A /* Build configuration list for PBXNativeTarget "WhisperTests" */ = {
+		195630AD1FD81E4800BB857E /* Build configuration list for PBXNativeTarget "WhisperTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1968CF181FD702A000CD5B2A /* Debug */,
-				1968CF191FD702A000CD5B2A /* Release */,
+				195630AE1FD81E4800BB857E /* Debug */,
+				195630AF1FD81E4800BB857E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1968CF1A1FD702A000CD5B2A /* Build configuration list for PBXNativeTarget "WhisperUITests" */ = {
+		195630B01FD81E4800BB857E /* Build configuration list for PBXNativeTarget "WhisperUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1968CF1B1FD702A000CD5B2A /* Debug */,
-				1968CF1C1FD702A000CD5B2A /* Release */,
+				195630B11FD81E4800BB857E /* Debug */,
+				195630B21FD81E4800BB857E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1968CEE41FD702A000CD5B2A /* Project object */;
+	rootObject = 1956307A1FD81E4800BB857E /* Project object */;
 }

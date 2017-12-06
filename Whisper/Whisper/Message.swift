@@ -2,12 +2,11 @@
 //  Message.swift
 //  Whisper
 //
-//  Created by Lucy Borthwick on 05/12/2017.
+//  Created by Lucy Borthwick on 06/12/2017.
 //  Copyright © 2017 Lucy Borthwick. All rights reserved.
 //
 
 import Foundation
-//import RealmSwift
 
 class Message {
     
@@ -24,7 +23,8 @@ class Message {
     }
     
     func sendText() {
-      self.toJson()
+        self.toJson()
+        // HTTP REQUEST
     }
     
     func toJson() {

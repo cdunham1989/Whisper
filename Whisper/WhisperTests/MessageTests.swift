@@ -2,7 +2,7 @@
 //  MessageTests.swift
 //  WhisperTests
 //
-//  Created by Lucy Borthwick on 05/12/2017.
+//  Created by Lucy Borthwick on 06/12/2017.
 //  Copyright © 2017 Lucy Borthwick. All rights reserved.
 //
 
@@ -31,6 +31,7 @@ class MessageTests: XCTestCase {
     func testConvertTextToJSON() {
         let _ = message.inputText(input: "Hello")
         let _ = message.toJson()
+        print(message.jsonS)
         XCTAssertEqual(message.jsonS, "{\"text\":\"Hello\"}")
     }
     
@@ -40,3 +41,4 @@ class MessageTests: XCTestCase {
         XCTAssertEqual(message.jsonS, "{\"text\":\"Hello\"}")
     }
 }
+
