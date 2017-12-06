@@ -11,11 +11,13 @@ target 'Whisper' do
 
   target 'WhisperTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
   end
 
   target 'WhisperUITests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
   end
 end

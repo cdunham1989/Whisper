@@ -14,7 +14,7 @@
 		1956308B1FD81E4800BB857E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 195630891FD81E4800BB857E /* Main.storyboard */; };
 		1956308D1FD81E4800BB857E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1956308C1FD81E4800BB857E /* Assets.xcassets */; };
 		195630901FD81E4800BB857E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1956308E1FD81E4800BB857E /* LaunchScreen.storyboard */; };
-		195630B41FD81E7B00BB857E /* GoogleService-Info (2).plist in Resources */ = {isa = PBXBuildFile; fileRef = 195630B31FD81E7B00BB857E /* GoogleService-Info (2).plist */; };
+		19B2B1CB1FD859680067686C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19B2B1CA1FD859680067686C /* GoogleService-Info.plist */; };
 		19B642851FD8229700EF5166 /* MessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B642841FD8229700EF5166 /* MessageTests.swift */; };
 		19B642871FD822B200EF5166 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B642861FD822B200EF5166 /* Message.swift */; };
 		19B642891FD84EA900EF5166 /* MessageViewControllerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B642881FD84EA900EF5166 /* MessageViewControllerUnitTests.swift */; };
@@ -52,7 +52,7 @@
 		1956309C1FD81E4800BB857E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		195630A11FD81E4800BB857E /* WhisperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhisperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		195630A71FD81E4800BB857E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		195630B31FD81E7B00BB857E /* GoogleService-Info (2).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (2).plist"; sourceTree = "<group>"; };
+		19B2B1CA1FD859680067686C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		19B642841FD8229700EF5166 /* MessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTests.swift; sourceTree = "<group>"; };
 		19B642861FD822B200EF5166 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		19B642881FD84EA900EF5166 /* MessageViewControllerUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewControllerUnitTests.swift; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 				195630891FD81E4800BB857E /* Main.storyboard */,
 				1956308C1FD81E4800BB857E /* Assets.xcassets */,
 				1956308E1FD81E4800BB857E /* LaunchScreen.storyboard */,
-				195630B31FD81E7B00BB857E /* GoogleService-Info (2).plist */,
+				19B2B1CA1FD859680067686C /* GoogleService-Info.plist */,
 				195630911FD81E4800BB857E /* Info.plist */,
 				19B642861FD822B200EF5166 /* Message.swift */,
 			);
@@ -291,8 +291,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				195630B41FD81E7B00BB857E /* GoogleService-Info (2).plist in Resources */,
 				195630901FD81E4800BB857E /* LaunchScreen.storyboard in Resources */,
+				19B2B1CB1FD859680067686C /* GoogleService-Info.plist in Resources */,
 				1956308D1FD81E4800BB857E /* Assets.xcassets in Resources */,
 				1956308B1FD81E4800BB857E /* Main.storyboard in Resources */,
 			);
@@ -321,9 +321,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WhisperTests/Pods-WhisperTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -424,9 +431,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WhisperUITests/Pods-WhisperUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

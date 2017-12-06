@@ -38,9 +38,9 @@ SPEC CHECKSUMS:
   FirebaseDatabase: 18ecb23e15c7f58bb0c4527e9cace06897cc40ca
   FirebaseInstanceID: 148c25c986c8699e67304b114e365713dce467f2
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
-  leveldb-library: 4f9eedf84ab46b4fa3b7893bf30714b2a1a74022
+  leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: 16513948cef188d449c3fd7cd1b8a7fb75ee2c39
+PODFILE CHECKSUM: 087f7ccc161a0a3c6c8e6bbf7f060fc69e3d510a
 
 COCOAPODS: 1.3.1
