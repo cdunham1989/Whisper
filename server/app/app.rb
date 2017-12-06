@@ -49,6 +49,9 @@ EventMachine.run do
     end
   end
 
-  MessageServer.run! :port => 9292
-
+  if ENV['RACK_ENV'] == 'test'
+    EventMachine.stop_event_loop
+  else
+    MessageServer.run! :port => 9292
+  end
 end
