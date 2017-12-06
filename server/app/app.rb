@@ -36,7 +36,6 @@ EventMachine.run do
 
     ws.onclose do
       ws.send "Closed"
-      EventMachine.stop_event_loop
       @clients.delete ws
     end
 
@@ -49,9 +48,5 @@ EventMachine.run do
     end
   end
 
-  if ENV['RACK_ENV'] == 'test'
-    EventMachine.stop_event_loop
-  else
-    MessageServer.run! :port => 9292
-  end
+  ENV['RACK_ENV'] == 'test' ? EventMachine.stop_event_loop : (MessageServer.run! :port => 9292)
 end
