@@ -23,6 +23,9 @@ Today we set out to begin working towards our MVP. We decided to split our team 
 - Swift app logic: creating users, conversations and a database for this information to persist.
 - Ruby server logic: Creating a remote server which accepts a string from the application, converts it into a JSON file and replies with a 'confirmation'.
 
+**Wednesday 6th December**
+
+- Set up a websocket using the tutorial https://www.engineyard.com/blog/getting-started-with-ruby-and-websockets
 
 ## Important Documents
 
