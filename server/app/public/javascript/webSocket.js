@@ -5,11 +5,10 @@ $(document).ready(function() {
   }
 
   var socket, host;
-  host = "ws://localhost:9292";
+  host = "ws://localhost:3001";
 
   function connect() {
     try {
-      console.log(host);
       socket = new WebSocket(host);
 
       addMessage("Socket State: " + socket.readyState + "\n");

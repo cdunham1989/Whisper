@@ -36,6 +36,7 @@ EventMachine.run do
 
     ws.onclose do
       ws.send "Closed"
+      EventMachine.stop_event_loop
       @clients.delete ws
     end
 
