@@ -11,9 +11,15 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    daemons (1.2.5)
     diff-lcs (1.3)
     docile (1.1.5)
+    em-websocket (0.5.1)
+      eventmachine (>= 0.12.9)
+      http_parser.rb (~> 0.6.0)
+    eventmachine (1.2.5)
     hirb (0.7.3)
+    http_parser.rb (0.6.0)
     json (2.1.0)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
@@ -52,6 +58,10 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.0)
       tilt (~> 2.0)
+    thin (1.7.2)
+      daemons (~> 1.0, >= 1.0.9)
+      eventmachine (~> 1.0, >= 1.0.4)
+      rack (>= 1, < 3)
     tilt (2.0.8)
     xpath (2.1.0)
       nokogiri (~> 1.3)
@@ -61,11 +71,13 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  em-websocket
   json
   rspec
   simplecov
   simplecov-console
   sinatra
+  thin
 
 RUBY VERSION
    ruby 2.4.2p198
