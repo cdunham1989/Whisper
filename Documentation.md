@@ -21,8 +21,7 @@ We spent time researching a number of important topics for our project:
 Today we set out to begin working towards our MVP. We decided to split our team to work on:
 
 - Swift app logic: creating users, conversations and a database for this information to persist.
-- Remote server which will accept the messages from the application and reply with a 'success response'.
-
+- Ruby server logic: Creating a remote server which accepts a string from the application, converts it into a JSON file and replies with a 'confirmation'.
 
 
 ## Important Documents
