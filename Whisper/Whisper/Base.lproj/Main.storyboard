@@ -1,24 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="T2i-B4-X24">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Courier.ttc">
+            <string>Courier-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Message View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Message View Controller" customClass="MessageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="992-cj-CcY"/>
+                        <viewControllerLayoutGuide type="bottom" id="0n6-UI-SW4"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KOH-v8-uz5">
+                                <rect key="frame" x="16" y="585" width="253" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="253" id="QK8-c2-dsT"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="WU7-2O-OIO"/>
+                                    <constraint firstAttribute="height" constant="30" id="dJJ-GD-zgU"/>
+                                    <constraint firstAttribute="width" constant="253" id="due-uI-ANe"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZm-d2-h4R">
+                                <rect key="frame" x="277" y="585" width="68" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KuB-x3-jnf"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="68" id="ddN-Ax-Azl"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="h0D-Tv-cg8"/>
+                                    <constraint firstAttribute="width" constant="68" id="zM1-PF-PeT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0n6-UI-SW4" firstAttribute="top" secondItem="KOH-v8-uz5" secondAttribute="bottom" constant="52" id="3wQ-r5-jCY"/>
+                            <constraint firstItem="rZm-d2-h4R" firstAttribute="leading" secondItem="KOH-v8-uz5" secondAttribute="trailing" constant="8" id="FoM-QP-7Wv"/>
+                            <constraint firstItem="KOH-v8-uz5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MRk-Be-Sbv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rZm-d2-h4R" secondAttribute="trailing" constant="14" id="bSo-uV-gh7"/>
+                            <constraint firstItem="0n6-UI-SW4" firstAttribute="top" secondItem="rZm-d2-h4R" secondAttribute="bottom" constant="52" id="keI-bl-M9b"/>
+                            <constraint firstItem="rZm-d2-h4R" firstAttribute="leading" secondItem="KOH-v8-uz5" secondAttribute="trailing" constant="8" id="lp1-eF-WfD"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="GHv-lF-ipu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="479.19999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0y1-Mo-o0k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T2i-B4-X24" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CJk-q8-0Xu">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rzH-c0-Oqu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kKn-MC-Nq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-217" y="134"/>
         </scene>
     </scenes>
 </document>

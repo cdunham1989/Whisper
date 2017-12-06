@@ -24,7 +24,6 @@ class Message {
     
     func sendText() {
         self.toJson()
-        // HTTP REQUEST
     }
     
     func toJson() {

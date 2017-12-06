@@ -1,5 +1,5 @@
 //
-//  WhisperUITests.swift
+//  MessageViewControllerUITests.swift
 //  WhisperUITests
 //
 //  Created by Lucy Borthwick on 06/12/2017.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class WhisperUITests: XCTestCase {
+class MessageViewControllerUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
