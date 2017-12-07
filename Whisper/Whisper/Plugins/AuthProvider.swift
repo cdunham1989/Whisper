@@ -15,7 +15,7 @@ struct LoginErrorCode {
     static let INVALID_EMAIL = "Invalid email address";
     static let EMAIL_IN_USE = "Email already in use";
     static let INVALID_CREDENTIAL = "Invalid credential";
-    static let PROBLEM_CONNECTING = "Try later";
+    static let PROBLEM_CONNECTING = "Try again later";
 }
 
 class AuthProvider {
@@ -44,6 +44,7 @@ class AuthProvider {
                 self.handleErrors(err: error as! NSError, loginHandler: loginHandler);
             } else {
                 if user?.uid != nil {
+                    DBProvider.Instance.saveUser(withID: user!.uid, email: email, password: password);
                     self.login(email: email, password: password, loginHandler: loginHandler)
 
                 };
