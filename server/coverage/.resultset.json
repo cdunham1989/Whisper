@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/hugosykes/Makers/final-project/Whisper/server/spec/features/infrastructure_spec.rb": [
+      "/Users/oliverpople/Desktop/Makers/Projects/Whisper/server/spec/features/infrastructure_spec.rb": [
         1,
         null,
         1,
@@ -11,7 +11,7 @@
         null,
         null
       ],
-      "/Users/hugosykes/Makers/final-project/Whisper/server/spec/features/new_message_spec.rb": [
+      "/Users/oliverpople/Desktop/Makers/Projects/Whisper/server/spec/features/new_message_spec.rb": [
         1,
         null,
         1,
@@ -48,7 +48,7 @@
         null,
         null
       ],
-      "/Users/hugosykes/Makers/final-project/Whisper/server/spec/json_handler/json_handler_spec.rb": [
+      "/Users/oliverpople/Desktop/Makers/Projects/Whisper/server/spec/json_handler/json_handler_spec.rb": [
         1,
         1,
         null,
@@ -68,6 +68,6 @@
         null
       ]
     },
-    "timestamp": 1512585130
+    "timestamp": 1512630552
   }
 }
