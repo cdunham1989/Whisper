@@ -28,7 +28,6 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func LogIn(_ sender: Any) {
-        performSegue(withIdentifier: CONVERSATIONS_SEGUE, sender: nil);
         
         if UsernameTextField.text != "" && PasswordTextField.text != "" {
             
