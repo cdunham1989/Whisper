@@ -6,6 +6,7 @@ target 'Whisper' do
   use_frameworks!
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'JSQMessagesViewController'
 
   # Pods for Whisper
 
