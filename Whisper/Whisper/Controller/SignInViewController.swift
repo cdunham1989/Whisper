@@ -37,6 +37,7 @@ class SignInViewController: UIViewController {
                         self.alertTheUser(title: "Problem with authentication", message: message!);
                     } else {
                         self.UsernameTextField.text = "";
+                        self.PasswordTextField.text = "";
                         self.performSegue(withIdentifier: self.CONVERSATIONS_SEGUE, sender: nil)
                     }
                 })
@@ -47,7 +48,25 @@ class SignInViewController: UIViewController {
     } //login func
     
     @IBAction func SignUp(_ sender: Any) {
-    }
+        
+        if UsernameTextField.text != "" && PasswordTextField.text != "" {
+            
+            AuthProvider.Instance.login(email: UsernameTextField.text!, password: PasswordTextField.text!, loginHandler: { ( message ) in
+                
+                if message != nil {
+                    self.alertTheUser(title: "Problem creating the user", message: message!)
+                } else {
+                    
+                    self.UsernameTextField.text = "";
+                    self.PasswordTextField.text = "";
+                    self.performSegue(withIdentifier: self.CONVERSATIONS_SEGUE, sender: nil)
+                }
+            })
+            
+        } else {
+            alertTheUser(title: "Email is required", message: "Enter email in email field");
+        }
+    }//sign up func
     
     private func alertTheUser(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert);
