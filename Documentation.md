@@ -33,6 +33,9 @@ Continuing work towards MVP. Team split to work on:
 **Thursday 7th December**
 
 
+**Wednesday 6th December**
+
+- Set up a websocket using the tutorial https://www.engineyard.com/blog/getting-started-with-ruby-and-websockets
 
 ## Important Documents
 
