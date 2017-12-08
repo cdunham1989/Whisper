@@ -17,6 +17,8 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
     
     private let CELL_ID = "Cell";
     
+    private var conversations = [Conversation]();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -26,7 +28,7 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1;
+        return conversations.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
