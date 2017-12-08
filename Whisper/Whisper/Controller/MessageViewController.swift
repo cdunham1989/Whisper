@@ -31,6 +31,8 @@ class MessageViewController: JSQMessagesViewController {
         inputToolbar.contentView.leftBarButtonItem = nil
         collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
         collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
+        collectionView.backgroundColor = UIColor.black;
+        collectionView.collectionViewLayout.messageBubbleFont = UIFont.init(name: "Courier", size: 22);
     }
     
     // COLLECTION VIEW FUNCTIONS
