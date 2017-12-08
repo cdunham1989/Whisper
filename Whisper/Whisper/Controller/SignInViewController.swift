@@ -19,6 +19,8 @@ class SignInViewController: UIViewController {
     
     @IBOutlet weak var PasswordTextField: UITextField!
     
+    let rootRef = Database.database().reference()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,6 +52,7 @@ class SignInViewController: UIViewController {
     } //login func
     
     @IBAction func SignUp(_ sender: Any) {
+        
         
         if UsernameTextField.text != "" && PasswordTextField.text != "" {
             
