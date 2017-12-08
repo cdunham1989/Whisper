@@ -11,7 +11,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase 
 
-class ConversationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ConversationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FetchData {
     
     @IBOutlet weak var conversationsTableView: UITableView!
     
@@ -21,6 +21,16 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        DBProvider.Instance.delegate = self;
+        
+        DBProvider.Instance.getConversations();
+    }
+    
+    func dataReceived(conversations: [Conversation]) {
+        self.conversations = conversations;
+        
+        conversationsTableView.reloadData();
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -35,7 +45,7 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
         
         let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath);
         
-        cell.textLabel?.text = "This works"
+        cell.textLabel?.text = conversations[indexPath.row].name;
         
         return cell;
     }

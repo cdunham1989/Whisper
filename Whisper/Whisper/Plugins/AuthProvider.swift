@@ -46,7 +46,6 @@ class AuthProvider {
                 if user?.uid != nil {
                     DBProvider.Instance.saveUser(withID: user!.uid, email: email, password: password);
                     self.login(email: email, password: password, loginHandler: loginHandler)
-
                 };
             }
         });

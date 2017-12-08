@@ -13,7 +13,7 @@ class Conversation {
     private var _name = "";
     private var _id = "";
     
-    init(ud: String, name: String) {
+    init(id: String, name: String) {
         _id = id;
         _name = name;
     }

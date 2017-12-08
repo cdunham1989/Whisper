@@ -10,9 +10,15 @@ import Foundation
 import FirebaseDatabase
 import FirebaseStorage
 
+protocol FetchData: class {
+    func dataReceived(conversations: [Conversation]);
+}
+
 class DBProvider {
     
     private static let _instance = DBProvider();
+    
+    weak var delegate: FetchData?;
     
     private init() {
         
@@ -48,5 +54,30 @@ class DBProvider {
         let data: Dictionary<String, Any> = [Constants.EMAIL: email, Constants.PASSWORD: password];
         
         conversationsRef.child(withID).setValue(data);
+    }
+    
+    func getConversations() {
+        
+        conversationsRef.observeSingleEvent(of: DataEventType.value){
+            (snapshot: DataSnapshot) in
+            var conversations = [Conversation]();
+            
+            if let myConversations = snapshot.value as? NSDictionary {
+                
+                for (key, value) in myConversations {
+                    
+                    if let conversationData = value as? NSDictionary {
+                        
+                        if let email = conversationData[Constants.EMAIL] as? String {
+                            
+                            let id = key as! String;
+                            let newConversation = Conversation(id: id, name: email);
+                            conversations.append(newConversation);
+                        }
+                    }
+                }
+            }
+            self.delegate?.dataReceived(conversations: conversations);
+        }
     }
 } //class
