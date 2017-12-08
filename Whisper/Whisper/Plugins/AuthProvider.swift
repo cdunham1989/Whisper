@@ -26,6 +26,8 @@ class AuthProvider {
         return _instance;
     }
     
+    var userName = "";
+    
     func login(email: String, password: String, loginHandler: LoginHandler?) {
         Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                 
@@ -69,7 +71,11 @@ class AuthProvider {
             }
         }
         return false;
-    } //log out 
+    } //log out
+    
+    func userID() -> String {
+        return Auth.auth().currentUser!.uid;
+    }
 
     private func handleErrors(err: NSError, loginHandler: LoginHandler?) {
         

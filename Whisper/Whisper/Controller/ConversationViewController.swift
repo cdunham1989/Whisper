@@ -31,6 +31,12 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
     func dataReceived(conversations: [Conversation]) {
         self.conversations = conversations;
         
+        for conversation in conversations {
+            if conversation.id == AuthProvider.Instance.userID() {
+                AuthProvider.Instance.userName = conversation.name;
+            }
+        }
+        
         conversationsTableView.reloadData();
     }
 

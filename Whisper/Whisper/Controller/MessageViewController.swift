@@ -25,8 +25,8 @@ class MessageViewController: JSQMessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.senderId = "1"
-        self.senderDisplayName = "Lucy";
+        self.senderId = AuthProvider.Instance.userID()
+        self.senderDisplayName = AuthProvider.Instance.userName;
         
         inputToolbar.contentView.leftBarButtonItem = nil
         collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
@@ -73,6 +73,7 @@ class MessageViewController: JSQMessagesViewController {
         messages.append(JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text));
         collectionView.reloadData()
         
+        MessagesHandler.Instance.sendMessage(senderID: senderId,senderName: senderDisplayName, text: text);
         
         finishSendingMessage();
     }
