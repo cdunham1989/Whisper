@@ -16,6 +16,7 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var conversationsTableView: UITableView!
     
     private let CELL_ID = "Cell";
+    private let MESSAGE_SEGUE = "MessageSegue";
     
     private var conversations = [Conversation]();
     
@@ -50,14 +51,16 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
         return cell;
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: MESSAGE_SEGUE, sender: nil);
+    }
+    
     @IBAction func logOutButton(_ sender: Any) {
         if AuthProvider.Instance.logOut() {
             dismiss(animated: true, completion: nil);
         }
     }
-    
-    @IBAction func newMessage(_ sender: Any) {
-    }
+
 }
  //class
 

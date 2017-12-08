@@ -53,7 +53,6 @@ class SignInViewController: UIViewController {
     
     @IBAction func SignUp(_ sender: Any) {
         
-        
         if UsernameTextField.text != "" && PasswordTextField.text != "" {
             
             AuthProvider.Instance.signUp(email: UsernameTextField.text!, password: PasswordTextField.text!, loginHandler: { ( message ) in

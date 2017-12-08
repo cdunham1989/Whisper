@@ -57,6 +57,9 @@ class DBProvider {
     }
     
     func getConversations() {
+        // at the moment all users display as being in a conversation when you log into the app
+        // need to add logic so that a username only displays if the current user is in /has had
+        // a conversation with the person whose username is displayed.
         
         conversationsRef.observeSingleEvent(of: DataEventType.value){
             (snapshot: DataSnapshot) in
@@ -79,5 +82,5 @@ class DBProvider {
             }
             self.delegate?.dataReceived(conversations: conversations);
         }
-    }
+    } //display conversations method
 } //class
