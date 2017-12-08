@@ -20,12 +20,20 @@ We spent time researching a number of important topics for our project:
 
 Today we set out to begin working towards our MVP. We decided to split our team to work on:
 
-- Swift app logic: creating users, conversations and a database for this information to persist.
-- Ruby server logic: Creating a remote server which accepts a string from the application, converts it into a JSON file and replies with a 'confirmation'.
+- Swift app logic: creating users, conversations and researching a database structure for this information to persist in.
+- Ruby server logic: Creating a remote server which accepts a string from the application, converts it into JSON format.
 
-**Thursday 6th December**
+**Wednesday 6th December**
 
+Continuing work towards MVP. Team split to work on:
+
+- Implementing Firebase for the Swift app and started work on handling requests to the server using sockets.
+- Increasing server functionality to a socket server which handles requests when they are received.
+
+**Thursday 7th December**
 - Ruby server logic: Hosted server on Heroku and switched from Eventmachine to Faye websocket for compatibility.
+- Set up a websocket using the tutorial: https://www.engineyard.com/blog/getting-started-with-ruby-and-websockets
+
 
 ## Important Documents
 

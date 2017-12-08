@@ -2,7 +2,9 @@ source 'https://rubygems.org'
 
 ruby '2.4.2'
 
+gem 'thin'
 gem 'sinatra'
+gem 'em-websocket'
 gem 'json'
 
 group :test do

@@ -18,11 +18,9 @@ Our aim is to create a mobile messaging app with end-to-end encryption.
 ## Tech Stack
 
 * Swift
-* Inbuilt Xcode Testing Framework
-* Realm (db)
-* *ORM?*
+* Inbuilt Xcode Testing Framework (Unit and Feature Tests)
+* Firebase (db)
 * *Test Coverage?*
-* *Feature test library?*
 
 ## User Stories
 
@@ -97,8 +95,8 @@ I want Whisper to generate a password for me
 ## Running The App Locally
 
 * Clone the repository
-* Run the app using `   `
-* Run our tests using `   `
+* Run the app by opening the project file in Xcode and clicking the play button.
+* Run our tests by pressing `cmd + u` whilst the project is open in Xcode.
 
 ## Collaborators
 

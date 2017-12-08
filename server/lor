@@ -1,5 +1,58 @@
-[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m
 
-Finished in 0.06391 seconds (files took 0.41284 seconds to load)
-[32m8 examples, 0 failures[0m
+Failures:
+
+  1) WebSocket feature it should attempt to intialise connection between client and websocket
+     [31mFailure/Error: expect(page).to have_content('Socket State: 0')[0m
+     [31m  expected to find text "Socket State: 0" in "Disconnect"[0m
+     [36m# ./spec/features/webSocket_spec.rb:7:in `block (2 levels) in <top (required)>'[0m
+
+  2) WebSocket feature it should establish a connection between client and websocket
+     [31mFailure/Error: expect(page).to have_content('Socket State: 1 (open)')[0m
+     [31m  expected to find text "Socket State: 1 (open)" in "Disconnect"[0m
+     [36m# ./spec/features/webSocket_spec.rb:12:in `block (2 levels) in <top (required)>'[0m
+
+  3) WebSocket feature it should close/ disconnect to the connection between client and websocket
+     [31mFailure/Error: expect(page).to have_content('Socket State: 3 (close)')[0m
+     [31m  expected to find text "Socket State: 3 (close)" in "Disconnect"[0m
+     [36m# ./spec/features/webSocket_spec.rb:17:in `block (2 levels) in <top (required)>'[0m
+
+  4) WebSocket feature it should intialise the apps index view
+     [31mFailure/Error: expect(page).to have_content('Received: Connected to /')[0m
+     [31m  expected to find text "Received: Connected to /" in "Disconnect"[0m
+     [36m# ./spec/features/webSocket_spec.rb:22:in `block (2 levels) in <top (required)>'[0m
+
+  5) WebSocket feature it takes the user's message string and appends it to the view content
+     [31mFailure/Error: expect(page).to have_content('hello')[0m
+     [31m  expected to find text "hello" in "Disconnect"[0m
+     [36m# ./spec/features/webSocket_spec.rb:28:in `block (2 levels) in <top (required)>'[0m
+
+  6) WebSocket feature it throws error when form input 'message' is an empty string
+     [31mFailure/Error: expect(page).to have_content('Please Enter a Message')[0m
+     [31m  expected to find text "Please Enter a Message" in "Disconnect"[0m
+     [36m# ./spec/features/webSocket_spec.rb:34:in `block (2 levels) in <top (required)>'[0m
+
+  7) WebSocket feature it confirms message has been recieved by server
+     [31mFailure/Error: expect(page).to have_content('Received: hello')[0m
+     [31m  expected to find text "Received: hello" in "Disconnect"[0m
+     [36m# ./spec/features/webSocket_spec.rb:40:in `block (2 levels) in <top (required)>'[0m
+
+  8) WebSocket feature it confirms message has been sent to server
+     [31mFailure/Error: expect(page).to have_content('Sent: hello')[0m
+     [31m  expected to find text "Sent: hello" in "Disconnect"[0m
+     [36m# ./spec/features/webSocket_spec.rb:46:in `block (2 levels) in <top (required)>'[0m
+
+Finished in 0.07482 seconds (files took 40.86 seconds to load)
+[31m16 examples, 8 failures[0m
+
+Failed examples:
+
+[31mrspec ./spec/features/webSocket_spec.rb:5[0m [36m# WebSocket feature it should attempt to intialise connection between client and websocket[0m
+[31mrspec ./spec/features/webSocket_spec.rb:10[0m [36m# WebSocket feature it should establish a connection between client and websocket[0m
+[31mrspec ./spec/features/webSocket_spec.rb:15[0m [36m# WebSocket feature it should close/ disconnect to the connection between client and websocket[0m
+[31mrspec ./spec/features/webSocket_spec.rb:20[0m [36m# WebSocket feature it should intialise the apps index view[0m
+[31mrspec ./spec/features/webSocket_spec.rb:25[0m [36m# WebSocket feature it takes the user's message string and appends it to the view content[0m
+[31mrspec ./spec/features/webSocket_spec.rb:31[0m [36m# WebSocket feature it throws error when form input 'message' is an empty string[0m
+[31mrspec ./spec/features/webSocket_spec.rb:37[0m [36m# WebSocket feature it confirms message has been recieved by server[0m
+[31mrspec ./spec/features/webSocket_spec.rb:43[0m [36m# WebSocket feature it confirms message has been sent to server[0m
 
