@@ -30,7 +30,7 @@ class AuthProvider {
         Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                 
                 if error != nil {
-                    self.handleErrors(err: error as! NSError, loginHandler: loginHandler);
+                    self.handleErrors(err: error! as NSError, loginHandler: loginHandler);
                 } else {
                     loginHandler?(nil);
                 }
@@ -41,7 +41,7 @@ class AuthProvider {
         Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
             
             if error != nil {
-                self.handleErrors(err: error as! NSError, loginHandler: loginHandler);
+                self.handleErrors(err: error! as NSError, loginHandler: loginHandler);
             } else {
                 if user?.uid != nil {
                     DBProvider.Instance.saveUser(withID: user!.uid, email: email, password: password);
