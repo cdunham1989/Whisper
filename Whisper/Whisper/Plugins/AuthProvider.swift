@@ -50,7 +50,14 @@ class AuthProvider {
                 };
             }
         });
-    }
+    } // sign up
+    
+    func isLoggedIn() -> Bool {
+        if Auth.auth().currentUser != nil {
+            return true;
+        }
+        return false;
+    } //is logged in 
     
     // log out function not needed yet 
 //    func logOut() -> Bool {

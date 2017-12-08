@@ -11,16 +11,32 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase 
 
-class ConversationViewController: UIViewController {
-
+class ConversationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var conversationsTableView: UITableView!
+    
+    private let CELL_ID = "Cell";
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1;
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath);
+        
+        cell.textLabel?.text = "This works"
+        
+        return cell;
+    }
 
     @IBAction func back(_ sender: Any) {
         dismiss(animated: true, completion: nil);
