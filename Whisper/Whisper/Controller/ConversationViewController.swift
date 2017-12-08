@@ -37,9 +37,11 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
         
         return cell;
     }
-
-    @IBAction func back(_ sender: Any) {
-        dismiss(animated: true, completion: nil);
+    
+    @IBAction func logOutButton(_ sender: Any) {
+        if AuthProvider.Instance.logOut() {
+            dismiss(animated: true, completion: nil);
+        }
     }
     
     @IBAction func newMessage(_ sender: Any) {

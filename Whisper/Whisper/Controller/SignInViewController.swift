@@ -22,14 +22,14 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if AuthProvider.Instance.isLoggedIn() {
+            self.performSegue(withIdentifier: self.CONVERSATIONS_SEGUE, sender: nil);
+        }
+    }
+
     @IBAction func LogIn(_ sender: Any) {
         
         if UsernameTextField.text != "" && PasswordTextField.text != "" {

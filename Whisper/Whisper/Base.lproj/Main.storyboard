@@ -102,14 +102,14 @@
                                     <navigationItem title="Conversations" id="28f-bp-f4e">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="cVb-is-ISN">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BHe-kN-nhi">
-                                                <rect key="frame" x="16" y="4" width="44" height="36"/>
+                                                <rect key="frame" x="16" y="4" width="70" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="Back">
+                                                <state key="normal" title="Logout">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="back:" destination="YqD-xz-aJ9" eventType="touchUpInside" id="Xm2-jM-art"/>
+                                                    <action selector="logOutButton:" destination="YqD-xz-aJ9" eventType="touchUpInside" id="qzY-jc-2ZH"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
