@@ -23,7 +23,7 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        MessagesHandler.Instance.observeMessages();
         MessagesHandler.Instance.delegate = self;
         
         self.senderId = AuthProvider.Instance.userID()
@@ -34,7 +34,6 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
         collectionView.backgroundColor = UIColor.black;
         collectionView.collectionViewLayout.messageBubbleFont = UIFont.init(name: "Courier", size: 22);
         
-        MessagesHandler.Instance.observeMessages();
     }
     
     // COLLECTION VIEW FUNCTIONS
@@ -57,12 +56,11 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, attributedTextForMessageBubbleTopLabelAt indexPath: IndexPath!) -> NSAttributedString! {
         return messages[indexPath.item].senderId == senderId ? nil : NSAttributedString(string: messages[indexPath.item].senderDisplayName)
-    }
+    } // function displaying the username above the message if it is not the current user. ie if i send a message to someone i will not see my username but when i get one back i will see theirs.
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForMessageBubbleTopLabelAt indexPath: IndexPath!) -> CGFloat {
         return messages[indexPath.item].senderId == senderId ? 0 : 15
     }
-    
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = super.collectionView(collectionView, cellForItemAt: indexPath) as! JSQMessagesCollectionViewCell
@@ -89,9 +87,9 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
         finishSendingMessage();
     }
     
-    @IBAction func backButton(_ sender: Any) {
+    
+    @IBAction func backToConversations(_ sender: Any) {
         dismiss(animated: true, completion: nil);
     }
     
-
 }
