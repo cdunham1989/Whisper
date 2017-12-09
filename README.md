@@ -18,8 +18,11 @@ Our aim is to create a mobile messaging app with end-to-end encryption.
 ## Tech Stack
 
 * Swift
-* Inbuilt Xcode Testing Framework (Unit and Feature Tests)
-* Firebase (db)
+* XCTest (App-side Unit and Feature Tests)
+* Firebase
+* Ruby
+* Sinatra
+* RSpec
 * *Test Coverage?*
 
 ## User Stories
