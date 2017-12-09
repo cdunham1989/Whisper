@@ -26,8 +26,6 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
         
         MessagesHandler.Instance.delegate = self;
         
-        MessagesHandler.Instance.observeMessages();
-        
         self.senderId = AuthProvider.Instance.userID()
         self.senderDisplayName = AuthProvider.Instance.userName;
         
@@ -35,7 +33,8 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
         collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         collectionView.backgroundColor = UIColor.black;
         collectionView.collectionViewLayout.messageBubbleFont = UIFont.init(name: "Courier", size: 22);
-
+        
+        MessagesHandler.Instance.observeMessages();
     }
     
     // COLLECTION VIEW FUNCTIONS
@@ -74,8 +73,8 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
     
     // delegation functions
     
-    func messageReceived(senderID: String, senderName: String, text: String) {
-        messages.append(JSQMessage(senderId: senderID, displayName: senderName, text: text))
+    func messageReceived(senderId: String, senderName: String, text: String) {
+        messages.append(JSQMessage(senderId: senderId, displayName: senderName, text: text))
         collectionView.reloadData();
     }
     
@@ -85,7 +84,7 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
         messages.append(JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text));
         collectionView.reloadData(); 
         
-        MessagesHandler.Instance.sendMessage(senderID: senderId,senderName: senderDisplayName, text: text);
+        MessagesHandler.Instance.sendMessage(senderId: senderId,senderName: senderDisplayName, text: text);
         
         finishSendingMessage();
     }

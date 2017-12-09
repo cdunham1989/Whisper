@@ -12,10 +12,11 @@ import FirebaseAuth
 typealias LoginHandler = (_ msg: String?) -> Void;
 
 struct LoginErrorCode {
-    static let INVALID_EMAIL = "Invalid email address";
-    static let EMAIL_IN_USE = "Email already in use";
-    static let INVALID_CREDENTIAL = "Invalid credential";
-    static let PROBLEM_CONNECTING = "Try again later";
+    static let INVALID_USERNAME = "Please append '@whisper.com' to your username";
+    static let USERNAME_IN_USE = "This username has already been assigned";
+    static let WEAK_PASSWORD = "Please enter a password of at least 6 characters"
+    static let WRONG_PASSWORD = "Error. Wrong password for this account"
+    static let PROBLEM_CONNECTING = "Problem connecting, please try again later";
 }
 
 class AuthProvider {
@@ -83,15 +84,17 @@ class AuthProvider {
             switch errCode {
                 
             case .invalidEmail:
-                loginHandler?(LoginErrorCode.INVALID_EMAIL);
-                break;
-            case .invalidCredential:
-                loginHandler?(LoginErrorCode.INVALID_CREDENTIAL);
+                loginHandler?(LoginErrorCode.INVALID_USERNAME);
                 break;
             case .emailAlreadyInUse:
-                loginHandler?(LoginErrorCode.EMAIL_IN_USE);
+                loginHandler?(LoginErrorCode.USERNAME_IN_USE);
                 break;
-                
+            case .weakPassword:
+                loginHandler?(LoginErrorCode.WEAK_PASSWORD);
+                break;
+            case .wrongPassword:
+                loginHandler?(LoginErrorCode.WRONG_PASSWORD);
+                break;
             default:
                 loginHandler?(LoginErrorCode.PROBLEM_CONNECTING);
                 break;

@@ -10,7 +10,7 @@ import Foundation
 import FirebaseDatabase
 
 protocol MessageReceivedDelegate: class {
-    func messageReceived(senderID: String, senderName: String, text: String);
+    func messageReceived(senderId: String, senderName: String, text: String);
 }
 
 class MessagesHandler {
@@ -23,8 +23,8 @@ class MessagesHandler {
         return _instance;
     }
     
-    func sendMessage(senderID: String, senderName: String, text: String) {
-        let data: Dictionary<String, Any> = [Constants.SENDER_ID: senderID, Constants.SENDER_NAME: senderName, Constants.TEXT: text];
+    func sendMessage(senderId: String, senderName: String, text: String) {
+        let data: Dictionary<String, Any> = [Constants.SENDER_ID: senderId, Constants.SENDER_NAME: senderName, Constants.TEXT: text];
         
         DBProvider.Instance.messagesRef.childByAutoId().setValue(data);
     }
@@ -36,7 +36,7 @@ class MessagesHandler {
                 if let senderID = data[Constants.SENDER_ID] as? String {
                     if let senderName = data[Constants.SENDER_NAME] as? String {
                         if let text = data[Constants.TEXT] as? String {
-                            self.delegate?.messageReceived(senderID: senderID, senderName: senderName, text: text);
+                            self.delegate?.messageReceived(senderId: senderID, senderName: senderName, text: text);
                         }
                     }
                 }
