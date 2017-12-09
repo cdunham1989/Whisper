@@ -77,6 +77,10 @@ class AuthProvider {
     func userID() -> String {
         return Auth.auth().currentUser!.uid;
     }
+    
+    func userEmail() -> String {
+        return Auth.auth().currentUser!.email!;
+    }
 
     private func handleErrors(err: NSError, loginHandler: LoginHandler?) {
         

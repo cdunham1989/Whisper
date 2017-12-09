@@ -73,17 +73,16 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
     
     func messageReceived(senderId: String, senderName: String, text: String) {
         messages.append(JSQMessage(senderId: senderId, displayName: senderName, text: text))
-        collectionView.reloadData();
+//        collectionView.reloadData();
     }
     
     // end delegation functions
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         messages.append(JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text));
-        collectionView.reloadData(); 
+        collectionView.reloadData();
         
         MessagesHandler.Instance.sendMessage(senderId: senderId,senderName: senderDisplayName, text: text);
-        
         finishSendingMessage();
     }
     

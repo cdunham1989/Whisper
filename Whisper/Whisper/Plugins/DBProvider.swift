@@ -21,7 +21,6 @@ class DBProvider {
     weak var delegate: FetchData?;
     
     private init() {
-        
     }
     
     static var Instance: DBProvider {
@@ -72,10 +71,11 @@ class DBProvider {
                     if let conversationData = value as? NSDictionary {
                         
                         if let email = conversationData[Constants.EMAIL] as? String {
-                            
                             let id = key as! String;
                             let newConversation = Conversation(id: id, name: email);
-                            conversations.append(newConversation);
+                            if email != AuthProvider.Instance.userEmail() {
+                                conversations.append(newConversation);
+                            }
                         }
                     }
                 }
@@ -84,3 +84,4 @@ class DBProvider {
         }
     } //display conversations method
 } //class
+

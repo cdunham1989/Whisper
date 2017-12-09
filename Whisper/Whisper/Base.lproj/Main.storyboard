@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -26,9 +27,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0i-Tu-e8z">
-                                <rect key="frame" x="16" y="416" width="142" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0i-Tu-e8z">
+                                <rect key="frame" x="36" y="470" width="91" height="37"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
                                 <state key="normal" title="Log in">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -37,23 +37,14 @@
                                     <action selector="LogIn:" destination="j3C-5p-1ZM" eventType="touchUpInside" id="k2d-qf-dyh"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ofh-qK-Tkk" userLabel="UsernameTextField" customClass="UsernameTextField">
-                                <rect key="frame" x="54" y="334" width="284" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QwG-di-rn1" userLabel="UsernameTextField" customClass="UsernameTextField">
-                                <rect key="frame" x="54" y="378" width="284" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QwG-di-rn1" userLabel="UsernameTextField" customClass="UsernameTextField">
+                                <rect key="frame" x="36" y="403" width="303" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNC-bS-zbt">
-                                <rect key="frame" x="216" y="424" width="130" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNC-bS-zbt">
+                                <rect key="frame" x="233" y="470" width="106" height="37"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
                                 <state key="normal" title="Sign up">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -62,8 +53,26 @@
                                     <action selector="SignUp:" destination="j3C-5p-1ZM" eventType="touchUpInside" id="uvq-eh-gaN"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ofh-qK-Tkk" userLabel="UsernameTextField" customClass="UsernameTextField">
+                                <rect key="frame" x="36" y="341" width="303" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="psH-lu-CHB" firstAttribute="top" secondItem="I0i-Tu-e8z" secondAttribute="bottom" constant="160" id="1HD-gj-ARh"/>
+                            <constraint firstItem="psH-lu-CHB" firstAttribute="top" secondItem="jNC-bS-zbt" secondAttribute="bottom" constant="160" id="AXS-kF-uke"/>
+                            <constraint firstItem="ofh-qK-Tkk" firstAttribute="leading" secondItem="4TW-VN-ziA" secondAttribute="leading" constant="36" id="LJl-H6-RPd"/>
+                            <constraint firstItem="QwG-di-rn1" firstAttribute="leading" secondItem="4TW-VN-ziA" secondAttribute="leading" constant="36" id="M1O-Lt-v4Q"/>
+                            <constraint firstItem="QwG-di-rn1" firstAttribute="top" secondItem="ofh-qK-Tkk" secondAttribute="bottom" constant="32" id="M2X-0S-Fwo"/>
+                            <constraint firstAttribute="trailing" secondItem="ofh-qK-Tkk" secondAttribute="trailing" constant="36" id="Xs7-OP-Vvp"/>
+                            <constraint firstItem="I0i-Tu-e8z" firstAttribute="leading" secondItem="4TW-VN-ziA" secondAttribute="leadingMargin" constant="20" id="lOf-1d-S79"/>
+                            <constraint firstItem="I0i-Tu-e8z" firstAttribute="top" secondItem="QwG-di-rn1" secondAttribute="bottom" constant="37" id="ppa-OZ-crS"/>
+                            <constraint firstAttribute="trailing" secondItem="QwG-di-rn1" secondAttribute="trailing" constant="36" id="tHZ-8b-rMV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jNC-bS-zbt" secondAttribute="trailing" constant="20" id="uog-hM-VpS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qqi-fp-3xo"/>
                     <connections>
