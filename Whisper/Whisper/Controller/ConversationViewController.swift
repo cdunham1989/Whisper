@@ -17,26 +17,21 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
     
     private let CELL_ID = "Cell";
     private let MESSAGE_SEGUE = "MessageSegue";
-    
     private var conversations = [Conversation]();
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         DBProvider.Instance.delegate = self;
-        
         DBProvider.Instance.getConversations();
     }
     
     func dataReceived(conversations: [Conversation]) {
         self.conversations = conversations;
-        
         for conversation in conversations {
             if conversation.id == AuthProvider.Instance.userID() {
                 AuthProvider.Instance.userName = conversation.name;
             }
         }
-        
         conversationsTableView.reloadData();
     }
 
@@ -49,9 +44,7 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath);
-        
         cell.textLabel?.text = conversations[indexPath.row].name;
         
         return cell;

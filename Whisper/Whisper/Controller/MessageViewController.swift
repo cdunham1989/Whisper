@@ -9,14 +9,13 @@
 import UIKit
 import JSQMessagesViewController
 
-class MessageViewController: JSQMessagesViewController {
+class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate {
     
     private var messages = [JSQMessage]();
     
     lazy var outgoingBubble: JSQMessagesBubbleImage = {
         return JSQMessagesBubbleImageFactory()!.outgoingMessagesBubbleImage(with: UIColor.black)
     }()
-    
     
     lazy var incomingBubble: JSQMessagesBubbleImage = {
         return JSQMessagesBubbleImageFactory()!.incomingMessagesBubbleImage(with: UIColor.black)
@@ -25,14 +24,18 @@ class MessageViewController: JSQMessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        MessagesHandler.Instance.delegate = self;
+        
+        MessagesHandler.Instance.observeMessages();
+        
         self.senderId = AuthProvider.Instance.userID()
         self.senderDisplayName = AuthProvider.Instance.userName;
         
-        inputToolbar.contentView.leftBarButtonItem = nil
         collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
         collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         collectionView.backgroundColor = UIColor.black;
         collectionView.collectionViewLayout.messageBubbleFont = UIFont.init(name: "Courier", size: 22);
+
     }
     
     // COLLECTION VIEW FUNCTIONS
@@ -69,9 +72,18 @@ class MessageViewController: JSQMessagesViewController {
     
     // END COLLECTION VIEW FUNCTIONS
     
+    // delegation functions
+    
+    func messageReceived(senderID: String, senderName: String, text: String) {
+        messages.append(JSQMessage(senderId: senderID, displayName: senderName, text: text))
+        collectionView.reloadData();
+    }
+    
+    // end delegation functions
+    
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         messages.append(JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text));
-        collectionView.reloadData()
+        collectionView.reloadData(); 
         
         MessagesHandler.Instance.sendMessage(senderID: senderId,senderName: senderDisplayName, text: text);
         
