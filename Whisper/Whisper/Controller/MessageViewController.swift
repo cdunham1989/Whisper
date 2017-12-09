@@ -56,7 +56,7 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, attributedTextForMessageBubbleTopLabelAt indexPath: IndexPath!) -> NSAttributedString! {
         return messages[indexPath.item].senderId == senderId ? nil : NSAttributedString(string: messages[indexPath.item].senderDisplayName)
-    } // function displaying the username above the message if it is not the current user. ie if i send a message to someone i will not see my username but when i get one back i will see theirs.
+    } 
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForMessageBubbleTopLabelAt indexPath: IndexPath!) -> CGFloat {
         return messages[indexPath.item].senderId == senderId ? 0 : 15
@@ -73,7 +73,8 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
     
     func messageReceived(senderId: String, senderName: String, text: String) {
         messages.append(JSQMessage(senderId: senderId, displayName: senderName, text: text))
-//        collectionView.reloadData();
+        //collectionView.reloadData();
+        // ^^ if we keep this line in it sends the message twice...but taking it out means the previous convo only loads after a new message is sent .... need to find a way to stop this.
     }
     
     // end delegation functions

@@ -42,7 +42,7 @@ class MessagesHandler {
                 }
             }
         }
-    }
+    } //observe messages -- at the moment every single message sent reloads into a new conversation. ie. a conversation between person 1 and person 2 will appear when person 3 starts a new conversation with person 4. need to fix this. 
     
     
 } //class
