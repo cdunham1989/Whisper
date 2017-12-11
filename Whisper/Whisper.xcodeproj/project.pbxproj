@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		05E26720035BE4162A72F298 /* Pods_WhisperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A1DA636E9450C99FD2201C /* Pods_WhisperTests.framework */; };
 		0EAC85F21E712EE5E692BBA8 /* Pods_Whisper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D402C6D80EAE078F7C580090 /* Pods_Whisper.framework */; };
+		191CB32B1FDEA7BD00B30E36 /* WebSocketHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191CB32A1FDEA7BD00B30E36 /* WebSocketHandler.swift */; };
 		191F76E71FD96BDE0076E041 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F76E61FD96BDE0076E041 /* SignInViewController.swift */; };
 		191F76E91FD96E0C0076E041 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F76E81FD96E0C0076E041 /* ConversationViewController.swift */; };
 		195630861FD81E4800BB857E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195630851FD81E4800BB857E /* AppDelegate.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		0807CA13377DEA786CC594D4 /* Pods_WhisperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhisperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		191CB32A1FDEA7BD00B30E36 /* WebSocketHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketHandler.swift; sourceTree = "<group>"; };
 		191F76E61FD96BDE0076E041 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		191F76E81FD96E0C0076E041 /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		195630821FD81E4800BB857E /* Whisper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whisper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +205,7 @@
 				19E5EDF71FD984FF009FC100 /* AuthProvider.swift */,
 				19E5EDF91FD9AAF9009FC100 /* DBProvider.swift */,
 				831271051FDAFF8500E66063 /* MessagesHandler.swift */,
+				191CB32A1FDEA7BD00B30E36 /* WebSocketHandler.swift */,
 			);
 			path = Plugins;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 			files = (
 				191F76E71FD96BDE0076E041 /* SignInViewController.swift in Sources */,
 				1970B9BC1FDADA5F00E6F9CD /* MessageViewController.swift in Sources */,
+				191CB32B1FDEA7BD00B30E36 /* WebSocketHandler.swift in Sources */,
 				831271061FDAFF8500E66063 /* MessagesHandler.swift in Sources */,
 				19B642871FD822B200EF5166 /* Message.swift in Sources */,
 				19747B611FDAB23E00F957B8 /* Conversation.swift in Sources */,
