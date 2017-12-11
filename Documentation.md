@@ -33,20 +33,12 @@ Continuing work towards MVP. Team split to work on:
 **Thursday 7th December**
 - Ruby server logic: Hosted server on Heroku and switched from Eventmachine to Faye websocket for compatibility.
 - Set up a websocket using the tutorial: https://www.engineyard.com/blog/getting-started-with-ruby-and-websockets
+- Continuing work on app functionality. Finally sorted out users and messages being saved to the server.
 
+**Friday 8th December**
+- App functionality breakthrough, finally have messages being saved to the server,recalled from the server and assigned to the relevent users. App now shows like a proper conversation and storyboard for the app is complete. The design may need finishing before the deadline but the barebones functionality is all their.
+-
 
-## Important Documents
-
-[FizzBuzz Swift](https://medium.com/@ynzc/getting-started-with-tdd-in-swift-2fab3e07204b)   
-This is the walkthrough we used on day one to give us a starting point for using Swift. It also showed us how to effectively create an app using MVC in Swift.
-
-[Choosing an iOS Database](http://www.elitechsystems.com/which-database-you-should-choose-for-ios-application-development/)   
-This is the post we used that pointed us in the direction of using Realm as our database system for the application.
-
-[Libsignal-protocol-c](https://github.com/WhisperSystems/libsignal-protocol-c)
-
-[Signal Protocol](https://www.npmjs.com/package/signal-protocol)
-
-[Virgil-Twilio Demo](https://github.com/VirgilSecurity/virgil-demo-twilio)
-
-[Onion Browser](https://github.com/mtigas/OnionBrowser?files=1)
+**Monday 11th December**
+- Researching and attempting to encrypt user data to ensure passwords are saved in the database as a hash rather than just the password. We struggled to find something which works with Swift 4 effectively. We tried a few systems but found that they did not support Swift 4. Still trying to solve this issue.
+- Worked on app sending messages to web socket server, containing user information and outline of who it's being sent to. Messages are also now sent in JSON format and show within the server. Finally, messages can be sent from the server back to the app and show in the relevant conversation.
