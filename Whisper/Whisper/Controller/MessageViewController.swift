@@ -25,15 +25,15 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
     var socket = WebSocket(url: URL(string: "ws://whisper-server2017.herokuapp.com/")!)
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad();
         socket.delegate = self;
         socket.connect();
         
-        self.senderId = AuthProvider.Instance.userID()
+        self.senderId = AuthProvider.Instance.userID();
         self.senderDisplayName = AuthProvider.Instance.userEmail();
         
-        collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
-        collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
+        collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero;
+        collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero;
         collectionView.backgroundColor = UIColor.black;
         collectionView.collectionViewLayout.messageBubbleFont = UIFont.init(name: "Courier", size: 22);
         
@@ -46,6 +46,7 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
     
     func websocketDidConnect(socket: WebSocketClient) {
         print("websocket is connected")
+        socket.write(string: senderDisplayName)
     }
     
     func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
@@ -104,11 +105,14 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         messages.append(JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text));
         collectionView.reloadData();
-        
         MessagesHandler.Instance.sendMessage(senderId: senderId,senderName: senderDisplayName, text: text);
-        
+        socket.write(string: text);
         finishSendingMessage();
     }
+    
+//    func JSQToJson(JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text)) {
+//
+//    }
     
     deinit {
         socket.disconnect(forceTimeout: 0)
