@@ -104,12 +104,10 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
     
     func messageReceived(senderId: String, senderName: String, text: String) {
         messages.append(JSQMessage(senderId: senderId, displayName: senderName, text: text))
-        //collectionView.reloadData();
-        // ^^ if we keep this line in it sends the message twice...but taking it out means the previous convo only loads after a new message is sent .... need to find a way to stop this.
+        collectionView.reloadData();
     }
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
-        messages.append(JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text));
         collectionView.reloadData();
         MessagesHandler.Instance.sendMessage(senderId: senderId,senderName: senderDisplayName, text: text);
         socket.write(string: JSQToJson(messageSenderName: senderDisplayName, messageReceiverName: receiverName, messageText: text, messageError: false));
