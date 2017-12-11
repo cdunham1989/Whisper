@@ -22,7 +22,8 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
         return JSQMessagesBubbleImageFactory()!.incomingMessagesBubbleImage(with: UIColor.black)
     }()
     
-//    var receiverName = Conversation.name();
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var receiverName = "";
     
     var socket = WebSocket(url: URL(string: "ws://whisper-server2017.herokuapp.com/")!)
 
@@ -33,6 +34,8 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
         
         self.senderId = AuthProvider.Instance.userID();
         self.senderDisplayName = AuthProvider.Instance.userEmail();
+        receiverName = appDelegate.myReceiverInstance.getReceiverName();
+        
         
         
         collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero;
@@ -109,12 +112,27 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
         messages.append(JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text));
         collectionView.reloadData();
         MessagesHandler.Instance.sendMessage(senderId: senderId,senderName: senderDisplayName, text: text);
-        socket.write(string: text);
+        socket.write(string: JSQToJson(messageSenderName: senderDisplayName, messageReceiverName: receiverName, messageText: text, messageError: false));
         finishSendingMessage();
     }
     
-    func JSQToJson(senderName: String, receiverName: String, text: String, error: Bool) {
-        
+    func JSQToJson(messageSenderName: String, messageReceiverName: String, messageText: String, messageError: Bool) -> String {
+        var jsonString = "";
+        struct Message: Codable {
+            var senderName: String;
+            var receiverName: String;
+            var text: String;
+            var error: Bool;
+        }
+        let message = Message(senderName: messageSenderName, receiverName: messageReceiverName, text: messageText, error: messageError)
+        let jsonEncoder = JSONEncoder()
+        do {
+            let jsonData = try jsonEncoder.encode(message)
+            jsonString = String(data: jsonData, encoding: .utf8)!
+        }
+        catch {
+        }
+        return jsonString
     }
     
     deinit {

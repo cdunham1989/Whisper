@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F91D6779182EA3E9F445F3DCDE60A785"
-               BuildableName = "Pods_Whisper.framework"
-               BlueprintName = "Pods-Whisper"
+               BlueprintIdentifier = "433E90BF6136E433A0FEA61CD4159E56"
+               BuildableName = "GoogleToolboxForMac.framework"
+               BlueprintName = "GoogleToolboxForMac-Defines-NSData+zlib"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F91D6779182EA3E9F445F3DCDE60A785"
-            BuildableName = "Pods_Whisper.framework"
-            BlueprintName = "Pods-Whisper"
+            BlueprintIdentifier = "433E90BF6136E433A0FEA61CD4159E56"
+            BuildableName = "GoogleToolboxForMac.framework"
+            BlueprintName = "GoogleToolboxForMac-Defines-NSData+zlib"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

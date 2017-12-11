@@ -24,6 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         func setReceiverName(name: String) {
             receiverName = name;
         }
+        
+        func getReceiverName() -> String {
+            return receiverName;
+        }
     }
     
     let myReceiverInstance = Receiver();
