@@ -23,7 +23,6 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
         super.viewDidLoad()
         DBProvider.Instance.delegate = self;
         DBProvider.Instance.getConversations();
-        
     }
     
     func dataReceived(conversations: [Conversation]) {

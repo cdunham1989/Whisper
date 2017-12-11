@@ -47,7 +47,7 @@ class SignInViewController: UIViewController {
                 })
                 
             } else {
-                alertTheUser(title: "Email is required", message: "Enter email in email field");
+                alertTheUser(title: "Username is required", message: "Enter username in username field");
             }
     } //login func
     

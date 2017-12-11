@@ -27,7 +27,7 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
         MessagesHandler.Instance.delegate = self;
         
         self.senderId = AuthProvider.Instance.userID()
-        self.senderDisplayName = AuthProvider.Instance.userName;
+        self.senderDisplayName = AuthProvider.Instance.userEmail();
         
         collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
         collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
@@ -56,7 +56,7 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, attributedTextForMessageBubbleTopLabelAt indexPath: IndexPath!) -> NSAttributedString! {
         return messages[indexPath.item].senderId == senderId ? nil : NSAttributedString(string: messages[indexPath.item].senderDisplayName)
-    } 
+    } // display username above message youve received
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForMessageBubbleTopLabelAt indexPath: IndexPath!) -> CGFloat {
         return messages[indexPath.item].senderId == senderId ? 0 : 15
@@ -84,6 +84,7 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
         collectionView.reloadData();
         
         MessagesHandler.Instance.sendMessage(senderId: senderId,senderName: senderDisplayName, text: text);
+        
         finishSendingMessage();
     }
     
