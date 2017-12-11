@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+
+
+//all the socket stuff....
+//
+//func toJson {
+//    .....
+//}
+//
+//func sendmessage {
+//    message.toJson
+//    ....
+//}
+

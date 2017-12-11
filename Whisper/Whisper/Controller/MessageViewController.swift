@@ -8,8 +8,9 @@
 
 import UIKit
 import JSQMessagesViewController
+import Starscream
 
-class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate {
+class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate, WebSocketDelegate {
     
     private var messages = [JSQMessage]();
     
@@ -20,11 +21,13 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
     lazy var incomingBubble: JSQMessagesBubbleImage = {
         return JSQMessagesBubbleImageFactory()!.incomingMessagesBubbleImage(with: UIColor.black)
     }()
+    
+    var socket = WebSocket(url: URL(string: "ws://whisper-server2017.herokuapp.com/")!)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        MessagesHandler.Instance.observeMessages();
-        MessagesHandler.Instance.delegate = self;
+        socket.delegate = self;
+        socket.connect();
         
         self.senderId = AuthProvider.Instance.userID()
         self.senderDisplayName = AuthProvider.Instance.userEmail();
@@ -34,7 +37,30 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
         collectionView.backgroundColor = UIColor.black;
         collectionView.collectionViewLayout.messageBubbleFont = UIFont.init(name: "Courier", size: 22);
         
+        MessagesHandler.Instance.observeMessages();
+        MessagesHandler.Instance.delegate = self;
+    
     }
+    
+    // web socket functions
+    
+    func websocketDidConnect(socket: WebSocketClient) {
+        print("websocket is connected")
+    }
+    
+    func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
+        print("websocket is disconnected: \(String(describing: error?.localizedDescription))")
+    }
+    
+    func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
+        print("got some text: \(text)")
+    }
+    
+    func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
+        print("got some data: \(data.count)")
+    }
+    // end of web socket functions
+    
     
     // COLLECTION VIEW FUNCTIONS
     
@@ -69,15 +95,11 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
     
     // END COLLECTION VIEW FUNCTIONS
     
-    // delegation functions
-    
     func messageReceived(senderId: String, senderName: String, text: String) {
         messages.append(JSQMessage(senderId: senderId, displayName: senderName, text: text))
         //collectionView.reloadData();
         // ^^ if we keep this line in it sends the message twice...but taking it out means the previous convo only loads after a new message is sent .... need to find a way to stop this.
     }
-    
-    // end delegation functions
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         messages.append(JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text));
@@ -88,6 +110,10 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
         finishSendingMessage();
     }
     
+    deinit {
+        socket.disconnect(forceTimeout: 0)
+        socket.delegate = nil
+    }
     
     @IBAction func backToConversations(_ sender: Any) {
         dismiss(animated: true, completion: nil);
