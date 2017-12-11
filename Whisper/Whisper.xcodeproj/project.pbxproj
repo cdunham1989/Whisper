@@ -27,6 +27,7 @@
 		19E5EDFC1FD9AE58009FC100 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5EDFB1FD9AE58009FC100 /* Constants.swift */; };
 		19E5EDFE1FD9B959009FC100 /* DBProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5EDFD1FD9B959009FC100 /* DBProviderTests.swift */; };
 		831271061FDAFF8500E66063 /* MessagesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831271051FDAFF8500E66063 /* MessagesHandler.swift */; };
+		832103A91FDEE06F004E439A /* CryptoSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832103A81FDEE06F004E439A /* CryptoSwift.swift */; };
 		BE7C5EE64FDA8AF89BF42770 /* Pods_WhisperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0807CA13377DEA786CC594D4 /* Pods_WhisperUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		5CB22BF02806F06491463C4B /* Pods-WhisperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhisperUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhisperUITests/Pods-WhisperUITests.release.xcconfig"; sourceTree = "<group>"; };
 		74A1DA636E9450C99FD2201C /* Pods_WhisperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhisperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		831271051FDAFF8500E66063 /* MessagesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesHandler.swift; sourceTree = "<group>"; };
+		832103A81FDEE06F004E439A /* CryptoSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoSwift.swift; sourceTree = "<group>"; };
 		8B6CF3D00C6951E068BCF6D5 /* Pods-Whisper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whisper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whisper/Pods-Whisper.debug.xcconfig"; sourceTree = "<group>"; };
 		A0D953D6963C78C3950E356A /* Pods-WhisperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhisperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhisperTests/Pods-WhisperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D402C6D80EAE078F7C580090 /* Pods_Whisper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whisper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +202,7 @@
 		19E5EDF61FD984EA009FC100 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				832103A81FDEE06F004E439A /* CryptoSwift.swift */,
 				19E5EDF71FD984FF009FC100 /* AuthProvider.swift */,
 				19E5EDF91FD9AAF9009FC100 /* DBProvider.swift */,
 				831271051FDAFF8500E66063 /* MessagesHandler.swift */,
@@ -466,6 +469,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Whisper/Pods-Whisper-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac-f0850809/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
@@ -475,6 +479,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
@@ -559,6 +564,7 @@
 				19E5EDFC1FD9AE58009FC100 /* Constants.swift in Sources */,
 				19E5EDFA1FD9AAF9009FC100 /* DBProvider.swift in Sources */,
 				195630861FD81E4800BB857E /* AppDelegate.swift in Sources */,
+				832103A91FDEE06F004E439A /* CryptoSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

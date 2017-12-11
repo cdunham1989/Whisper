@@ -22,6 +22,8 @@ struct LoginErrorCode {
 class AuthProvider {
     
     private static let _instance = AuthProvider();
+    
+    var cryptoswift = CryptoSwift()
 
     static var Instance: AuthProvider {
         return _instance;
@@ -44,17 +46,17 @@ class AuthProvider {
     func signUp(email: String, password: String, loginHandler: LoginHandler?) {
         /// encrypt password here
     
-       let encryptedPassword = CryptoSwift.encrypt(self.signUp.password)
+        let encryptedPassword = cryptoswift.encrypt(text: password)
         
         //
-        Auth.auth().createUser(withEmail: email, password: encryptedPassword, completion: { (user, error) in
+        Auth.auth().createUser(withEmail: email, password: encryptedPassword!, completion: { (user, error) in
             
             if error != nil {
                 self.handleErrors(err: error! as NSError, loginHandler: loginHandler);
             } else {
                 if user?.uid != nil {
                     DBProvider.Instance.saveUser(withID: user!.uid, email: email, password: password);
-                    self.login(email: email, password: password, loginHandler: loginHandler)
+                    self.login(email: email, password: encryptedPassword!, loginHandler: loginHandler)
                 };
             }
         });

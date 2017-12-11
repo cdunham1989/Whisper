@@ -26,5 +26,4 @@ class CryptoSwift {
         }
         return nil
     }
-
 }
