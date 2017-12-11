@@ -22,6 +22,13 @@ class Conversation {
         return _name;
     }
     
+    func nameStripper() -> String {
+        let currentName = name
+        let index = currentName.index(of: "@") ?? name.endIndex
+        let prefix = currentName[..<index]
+        return String(prefix)
+    }
+    
     var id: String {
         return _id;
     }

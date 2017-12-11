@@ -46,12 +46,12 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath);
-        cell.textLabel?.text = conversations[indexPath.row].name;
+        cell.textLabel?.text = conversations[indexPath.row].nameStripper();
         return cell;
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        appDelegate.myReceiverInstance.setReceiverName(name: conversations[indexPath.row].name);
+        appDelegate.myReceiverInstance.setReceiverName(name: conversations[indexPath.row].nameStripper());
         performSegue(withIdentifier: MESSAGE_SEGUE, sender: nil);
     }
     

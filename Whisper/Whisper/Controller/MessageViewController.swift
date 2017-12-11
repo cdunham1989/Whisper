@@ -33,7 +33,7 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
         socket.connect();
         
         self.senderId = AuthProvider.Instance.userID();
-        self.senderDisplayName = AuthProvider.Instance.userEmail();
+        self.senderDisplayName = AuthProvider.Instance.userEmailStripped();
         receiverName = appDelegate.myReceiverInstance.getReceiverName();
         
         
