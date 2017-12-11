@@ -14,9 +14,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    override init() {
-        FirebaseApp.configure()
+    class Receiver {
+        var receiverName: String
+        
+        init() {
+            receiverName = "";
+        }
+        
+        func setReceiverName(name: String) {
+            receiverName = name;
+        }
     }
+    
+    let myReceiverInstance = Receiver();
+    
+    override init() {
+        FirebaseApp.configure();
+    }
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         return true

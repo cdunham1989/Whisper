@@ -22,6 +22,8 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
         return JSQMessagesBubbleImageFactory()!.incomingMessagesBubbleImage(with: UIColor.black)
     }()
     
+//    var receiverName = Conversation.name();
+    
     var socket = WebSocket(url: URL(string: "ws://whisper-server2017.herokuapp.com/")!)
 
     override func viewDidLoad() {
@@ -31,6 +33,7 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
         
         self.senderId = AuthProvider.Instance.userID();
         self.senderDisplayName = AuthProvider.Instance.userEmail();
+        
         
         collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero;
         collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero;
@@ -110,9 +113,9 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
         finishSendingMessage();
     }
     
-//    func JSQToJson(JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text)) {
-//
-//    }
+    func JSQToJson(senderName: String, receiverName: String, text: String, error: Bool) {
+        
+    }
     
     deinit {
         socket.disconnect(forceTimeout: 0)
