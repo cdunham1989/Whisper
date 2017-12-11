@@ -37,8 +37,10 @@ Continuing work towards MVP. Team split to work on:
 
 **Friday 8th December**
 - App functionality breakthrough, finally have messages being saved to the server,recalled from the server and assigned to the relevent users. App now shows like a proper conversation and storyboard for the app is complete. The design may need finishing before the deadline but the barebones functionality is all their.
--
+- Creating an operator class to authenticate conversations between different users within the websocket server. Increasing test coverage of the server.
+- Text input sanitation method for the websocket server.
 
 **Monday 11th December**
 - Researching and attempting to encrypt user data to ensure passwords are saved in the database as a hash rather than just the password. We struggled to find something which works with Swift 4 effectively. We tried a few systems but found that they did not support Swift 4. Still trying to solve this issue.
 - Worked on app sending messages to web socket server, containing user information and outline of who it's being sent to. Messages are also now sent in JSON format and show within the server. Finally, messages can be sent from the server back to the app and show in the relevant conversation.
+- Diagramming of the system and how both parts now speak to each other.
