@@ -52,7 +52,7 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
     
     func websocketDidConnect(socket: WebSocketClient) {
         print("websocket is connected")
-        socket.write(string: senderDisplayName)
+        socket.write(string: JSQToJson(messageSenderName: senderDisplayName, messageReceiverName: "", messageText: "", messageError: false))
     }
     
     func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
@@ -60,11 +60,29 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
     }
     
     func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
+        persistJSON(msg: text);
         print("got some text: \(text)")
+        collectionView.reloadData();
     }
     
     func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
         print("got some data: \(data.count)")
+    }
+    
+    func persistJSON(msg: String) {
+        struct ReceivedMessage: Codable {
+            var senderName : String;
+            var receiverName : String;
+            var text : String;
+            var error : Bool;
+        }
+        
+        let decoder = JSONDecoder();
+        let jsonData = msg.data(using: .utf8)!
+        let parsedJSON = try? decoder.decode(ReceivedMessage.self, from: jsonData);
+//        var parsedJSON = JSON.parse(msg);
+        let data: Dictionary<String, Any> = [Constants.SENDER_ID: senderId, Constants.SENDER_NAME: parsedJSON!.senderName, Constants.RECEIVER_NAME: parsedJSON!.receiverName, Constants.TEXT: parsedJSON!.text];
+        DBProvider.Instance.messagesRef.childByAutoId().setValue(data)
     }
     // end of web socket functions
     
@@ -109,7 +127,7 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         collectionView.reloadData();
-        MessagesHandler.Instance.sendMessage(senderId: senderId,senderName: senderDisplayName, text: text);
+//        MessagesHandler.Instance.sendMessage(senderId: senderId,senderName: senderDisplayName, text: text);
         socket.write(string: JSQToJson(messageSenderName: senderDisplayName, messageReceiverName: receiverName, messageText: text, messageError: false));
         finishSendingMessage();
     }

@@ -24,5 +24,6 @@ class Constants {
     static let TEXT = "text";
     static let SENDER_ID = "sender_id";
     static let SENDER_NAME = "sender_name";
+    static let RECEIVER_NAME = "receiver_name";
     
 }// class
