@@ -2,7 +2,9 @@
 
 ## Project Outline
 
-Our aim is to create a mobile messaging app with end-to-end encryption.
+Our aim is to create a mobile messaging app with end-to-end encryption. We decided to create an up for iOS using Swift and XCode. For this application to work as we intend we have also created a websocket server in Ruby which we passed the messages through as they were being sent by the application.
+
+Currently we are working on encrypting the messages so that the end-to-end encryption goal will be met.
 
 ## Working Methodologies
 
@@ -23,7 +25,7 @@ Our aim is to create a mobile messaging app with end-to-end encryption.
 * Ruby
 * Sinatra
 * RSpec
-* *Test Coverage?*
+* SimpleCov
 
 ## User Stories
 
@@ -51,8 +53,8 @@ So that I can maintain a conversation,
 I need to be able to receive a message from another user
 
 As a user,
-So I know when I received a message,
-I want to see a timestamp on the message
+So I know who I got the message from
+I would like to see the username of the user next to the message
 ```
 
 **Additional Features**
