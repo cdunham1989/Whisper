@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		05E26720035BE4162A72F298 /* Pods_WhisperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A1DA636E9450C99FD2201C /* Pods_WhisperTests.framework */; };
 		0EAC85F21E712EE5E692BBA8 /* Pods_Whisper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D402C6D80EAE078F7C580090 /* Pods_Whisper.framework */; };
+		191CB32C1FDEAD4A00B30E36 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191CB32D1FDEAD4A00B30E36 /* Starscream.framework */; };
+		191CB32F1FDEAD7100B30E36 /* Starscream.framework in Copy Frameworks (1 item) */ = {isa = PBXBuildFile; fileRef = 191CB32D1FDEAD4A00B30E36 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		191F76E71FD96BDE0076E041 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F76E61FD96BDE0076E041 /* SignInViewController.swift */; };
 		191F76E91FD96E0C0076E041 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F76E81FD96E0C0076E041 /* ConversationViewController.swift */; };
 		195630861FD81E4800BB857E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195630851FD81E4800BB857E /* AppDelegate.swift */; };
@@ -47,8 +49,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		191CB32E1FDEAD5000B30E36 /* Copy Frameworks (1 item) */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				191CB32F1FDEAD7100B30E36 /* Starscream.framework in Copy Frameworks (1 item) */,
+			);
+			name = "Copy Frameworks (1 item)";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0807CA13377DEA786CC594D4 /* Pods_WhisperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhisperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		191CB32D1FDEAD4A00B30E36 /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		191F76E61FD96BDE0076E041 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		191F76E81FD96E0C0076E041 /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		195630821FD81E4800BB857E /* Whisper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whisper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				191CB32C1FDEAD4A00B30E36 /* Starscream.framework in Frameworks */,
 				0EAC85F21E712EE5E692BBA8 /* Pods_Whisper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +228,7 @@
 		5737E036EE8CD2F0AF7A1668 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				191CB32D1FDEAD4A00B30E36 /* Starscream.framework */,
 				D402C6D80EAE078F7C580090 /* Pods_Whisper.framework */,
 				74A1DA636E9450C99FD2201C /* Pods_WhisperTests.framework */,
 				0807CA13377DEA786CC594D4 /* Pods_WhisperUITests.framework */,
@@ -243,6 +262,7 @@
 				195630801FD81E4800BB857E /* Resources */,
 				CE627070C743CF9F33AC1C98 /* [CP] Embed Pods Frameworks */,
 				37C8BA8CF9A50DC9CD875F0F /* [CP] Copy Pods Resources */,
+				191CB32E1FDEAD5000B30E36 /* Copy Frameworks (1 item) */,
 			);
 			buildRules = (
 			);
@@ -470,6 +490,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac-f0850809/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -479,6 +500,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);

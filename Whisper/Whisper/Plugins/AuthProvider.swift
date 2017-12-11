@@ -82,10 +82,12 @@ class AuthProvider {
         return Auth.auth().currentUser!.email!;
     }
     
-//    func userEmailStripped() -> String {
-//        var email = Auth.auth().currentUser!.email!;
-//        return 
-//    }
+    func userEmailStripped() -> String {
+        let email = Auth.auth().currentUser!.email!;
+        let index = email.index(of: "@") ?? email.endIndex
+        let prefix = email[..<index]
+        return String(prefix)
+    }
 
     private func handleErrors(err: NSError, loginHandler: LoginHandler?) {
         
