@@ -80,9 +80,8 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
         let decoder = JSONDecoder();
         let jsonData = msg.data(using: .utf8)!
         let parsedJSON = try? decoder.decode(ReceivedMessage.self, from: jsonData);
-//        var parsedJSON = JSON.parse(msg);
         let data: Dictionary<String, Any> = [Constants.SENDER_ID: senderId, Constants.SENDER_NAME: parsedJSON!.senderName, Constants.RECEIVER_NAME: parsedJSON!.receiverName, Constants.TEXT: parsedJSON!.text];
-        DBProvider.Instance.messagesRef.childByAutoId().setValue(data)
+        if (parsedJSON?.text != "") { DBProvider.Instance.messagesRef.childByAutoId().setValue(data) }
     }
     // end of web socket functions
     
@@ -120,7 +119,7 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
     
     // END COLLECTION VIEW FUNCTIONS
     
-    func messageReceived(senderId: String, senderName: String, text: String) {
+    func messageReceived(senderId: String, senderName: String, receiverName: String, text: String) {
         messages.append(JSQMessage(senderId: senderId, displayName: senderName, text: text))
         collectionView.reloadData();
     }
