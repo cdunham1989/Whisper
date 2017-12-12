@@ -32,9 +32,6 @@ class AuthProvider {
     var userName = "";
     
     func login(email: String, password: String, loginHandler: LoginHandler?) {
-        /// check password matches hash
-        /// encrypt password
-//        var encryptedPassword = EncryptDecrypt.Instance.encryptPressed(password: password)
         
         Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                 
@@ -47,9 +44,6 @@ class AuthProvider {
     } //login func
     
     func signUp(email: String, password: String, loginHandler: LoginHandler?) {
-        
-        /// encrypt password
-//        let encryptedPassword = encryptDecrypt.encryptPressed(password: password)
         
         Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
             
