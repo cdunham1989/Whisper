@@ -77,6 +77,7 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
             var error : Bool;
         }
         
+        
         let decoder = JSONDecoder();
         let jsonData = msg.data(using: .utf8)!
         let parsedJSON = try? decoder.decode(ReceivedMessage.self, from: jsonData);
