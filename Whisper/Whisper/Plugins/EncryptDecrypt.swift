@@ -15,22 +15,22 @@ class EncryptDecrypt {
     
     let key = Key()
 
-func encryptPressed(password: String) {   //ibaction action needs to linked sign up button
-    let input = password /// strgin input needs to become password string inpout
-    let key = self.key  /// eventually key needs to be hardcoded and hidden in gitignore
-    let iv = "gqLOHUioQ0QjhuvI"  // eventually key needs to be hardcoded and hidden in gitignore
-    let en = try! input!.aesEncrypt(key!, iv: iv)
-    return en
-}
+    func encryptPressed(password: String) {
+        let input = password
+        let key = self.key
+        let iv = "gqLOHUioQ0QjhuvI"
+        let en = try! input!.aesEncrypt(key!, iv: iv)
+        return en
+    }
     
- func descryptPressed(password: String) {   // dont need right now
-    let input = password
-    let key = self.key  /// eventually key needs to be hardcoded and hidden in gitignore
-    let iv = "gqLOHUioQ0QjhuvI" // eventually key needs to be hardcoded and hidden in gitignore
-    let des = try! input!.aesDecrypt(key!, iv: iv)
-    return des
+    func descryptPressed(password: String) {
+        let input = password
+        let key = self.key
+        let iv = "gqLOHUioQ0QjhuvI"
+        let des = try! input!.aesDecrypt(key!, iv: iv)
+        return des
     
-}
+    }
 
 }
     
