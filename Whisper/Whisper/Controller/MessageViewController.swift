@@ -36,8 +36,6 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
         self.senderDisplayName = AuthProvider.Instance.userEmailStripped();
         receiverName = appDelegate.myReceiverInstance.getReceiverName();
         
-        
-        
         collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero;
         collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero;
         collectionView.backgroundColor = UIColor.black;
@@ -45,7 +43,8 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
         
         MessagesHandler.Instance.observeMessages();
         MessagesHandler.Instance.delegate = self;
-    
+        
+        self.navigationItem.title = receiverName
     }
     
     // web socket functions

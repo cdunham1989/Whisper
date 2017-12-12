@@ -162,7 +162,7 @@
             </objects>
             <point key="canvasLocation" x="1452" y="144.3778110944528"/>
         </scene>
-        <!--Message-->
+        <!--Message View Controller-->
         <scene sceneID="hgQ-13-c0d">
             <objects>
                 <viewController id="lNd-2L-hT3" customClass="MessageViewController" customModule="Whisper" customModuleProvider="target" sceneMemberID="viewController">
@@ -198,7 +198,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Message" id="51b-jX-H95">
+                    <navigationItem key="navigationItem" id="51b-jX-H95">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="Gw5-Ci-7OP">
                             <connections>
                                 <action selector="backToConversations:" destination="lNd-2L-hT3" id="hit-5a-wxI"/>
