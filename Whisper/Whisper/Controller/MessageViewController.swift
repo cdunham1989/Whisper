@@ -76,7 +76,6 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
             var error : Bool;
         }
         
-        
         let decoder = JSONDecoder();
         let jsonData = msg.data(using: .utf8)!
         let parsedJSON = try? decoder.decode(ReceivedMessage.self, from: jsonData);
@@ -120,7 +119,9 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
     // END COLLECTION VIEW FUNCTIONS
     
     func messageReceived(senderId: String, senderName: String, receiverName: String, text: String) {
-        messages.append(JSQMessage(senderId: senderId, displayName: senderName, text: text))
+        if ((senderName == senderDisplayName) && (receiverName == self.receiverName)) || ((senderName == self.receiverName) && (receiverName == senderDisplayName)) {
+            messages.append(JSQMessage(senderId: senderId, displayName: senderName, text: text))
+        }
         collectionView.reloadData();
     }
     
