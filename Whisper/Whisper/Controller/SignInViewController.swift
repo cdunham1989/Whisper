@@ -55,6 +55,8 @@ class SignInViewController: UIViewController {
         
         if UsernameTextField.text != "" && PasswordTextField.text != "" {
             
+            EncryptDecrypt.Instance.encryptPressed(password: PasswordTextField.text!)
+            
             AuthProvider.Instance.signUp(email: UsernameTextField.text!, password: PasswordTextField.text!, loginHandler: { ( message ) in
                 
                 if message != nil {

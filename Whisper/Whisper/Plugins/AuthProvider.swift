@@ -23,7 +23,7 @@ class AuthProvider {
     
     private static let _instance = AuthProvider();
     
-    let encryptDecrypt = EncryptDecrypt()
+//    let encryptDecrypt = EncryptDecrypt();
     
     static var Instance: AuthProvider {
         return _instance;
@@ -34,9 +34,9 @@ class AuthProvider {
     func login(email: String, password: String, loginHandler: LoginHandler?) {
         /// check password matches hash
         /// encrypt password
-        let encryptedPassword = encryptDecrypt.encryptPressed(password: String)
+//        var encryptedPassword = EncryptDecrypt.Instance.encryptPressed(password: password)
         
-        Auth.auth().signIn(withEmail: email, password: encryptedPassword, completion: { (user, error) in
+        Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                 
                 if error != nil {
                     self.handleErrors(err: error! as NSError, loginHandler: loginHandler);
@@ -49,9 +49,9 @@ class AuthProvider {
     func signUp(email: String, password: String, loginHandler: LoginHandler?) {
         
         /// encrypt password
-        let encryptedPassword = encryptDecrypt.encryptPressed(password: String)
+//        let encryptedPassword = encryptDecrypt.encryptPressed(password: password)
         
-        Auth.auth().createUser(withEmail: email, password: encryptedPassword!, completion: { (user, error) in
+        Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
             
             if error != nil {
                 self.handleErrors(err: error! as NSError, loginHandler: loginHandler);
