@@ -121,7 +121,10 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
     // END COLLECTION VIEW FUNCTIONS
     
     func messageReceived(senderId: String, senderName: String, receiverName: String, text: String) {
-        messages.append(JSQMessage(senderId: senderId, displayName: senderName, text: text))
+        
+        let decryptedText = EncryptDecrypt.Instance.decryptPressed(messageBody: text)
+        
+        messages.append(JSQMessage(senderId: senderId, displayName: senderName, text: decryptedText))
         collectionView.reloadData();
     }
     
