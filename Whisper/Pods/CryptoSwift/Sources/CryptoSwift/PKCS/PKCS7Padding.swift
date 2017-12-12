@@ -18,7 +18,7 @@
 //  and published by RSA Security Inc, starting in the early 1990s.
 //
 
-struct PKCS7Padding: PaddingProtocol {
+public struct PKCS7Padding: PaddingProtocol {
 
     enum Error: Swift.Error {
         case invalidPaddingValue
@@ -27,7 +27,7 @@ struct PKCS7Padding: PaddingProtocol {
     init() {
     }
 
-    func add(to bytes: Array<UInt8>, blockSize: Int) -> Array<UInt8> {
+    public func add(to bytes: Array<UInt8>, blockSize: Int) -> Array<UInt8> {
         let padding = UInt8(blockSize - (bytes.count % blockSize))
         var withPadding = bytes
         if padding == 0 {
@@ -44,7 +44,7 @@ struct PKCS7Padding: PaddingProtocol {
         return withPadding
     }
 
-    func remove(from bytes: Array<UInt8>, blockSize _: Int?) -> Array<UInt8> {
+    public func remove(from bytes: Array<UInt8>, blockSize _: Int?) -> Array<UInt8> {
         guard !bytes.isEmpty, let lastByte = bytes.last else {
             return bytes
         }

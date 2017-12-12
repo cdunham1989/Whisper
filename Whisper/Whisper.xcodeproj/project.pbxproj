@@ -65,6 +65,7 @@
 		195630A71FD81E4800BB857E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1970B9BB1FDADA5F00E6F9CD /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		19747B601FDAB23E00F957B8 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		1986C25D1FE01A1A0008CE68 /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B2B1CA1FD859680067686C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		19B642841FD8229700EF5166 /* MessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTests.swift; sourceTree = "<group>"; };
 		19B642861FD822B200EF5166 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -216,6 +217,7 @@
 		5737E036EE8CD2F0AF7A1668 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1986C25D1FE01A1A0008CE68 /* CryptoSwift.framework */,
 				D402C6D80EAE078F7C580090 /* Pods_Whisper.framework */,
 				74A1DA636E9450C99FD2201C /* Pods_WhisperTests.framework */,
 				0807CA13377DEA786CC594D4 /* Pods_WhisperUITests.framework */,
