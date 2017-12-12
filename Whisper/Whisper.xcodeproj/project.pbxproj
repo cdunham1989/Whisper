@@ -27,6 +27,7 @@
 		19E5EDFC1FD9AE58009FC100 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5EDFB1FD9AE58009FC100 /* Constants.swift */; };
 		19E5EDFE1FD9B959009FC100 /* DBProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5EDFD1FD9B959009FC100 /* DBProviderTests.swift */; };
 		6AA55A5D1FDFDA2A001F0D5E /* EncryptDecrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA55A5C1FDFDA2A001F0D5E /* EncryptDecrypt.swift */; };
+		6AA610681FDFF882008023F7 /* key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA610671FDFF882008023F7 /* key.swift */; };
 		831271061FDAFF8500E66063 /* MessagesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831271051FDAFF8500E66063 /* MessagesHandler.swift */; };
 		BE7C5EE64FDA8AF89BF42770 /* Pods_WhisperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0807CA13377DEA786CC594D4 /* Pods_WhisperUITests.framework */; };
 /* End PBXBuildFile section */
@@ -78,6 +79,7 @@
 		3B807CC2A75CBECFBF4AEB65 /* Pods-WhisperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhisperUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhisperUITests/Pods-WhisperUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5CB22BF02806F06491463C4B /* Pods-WhisperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhisperUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhisperUITests/Pods-WhisperUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6AA55A5C1FDFDA2A001F0D5E /* EncryptDecrypt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptDecrypt.swift; sourceTree = "<group>"; };
+		6AA610671FDFF882008023F7 /* key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = key.swift; sourceTree = "<group>"; };
 		74A1DA636E9450C99FD2201C /* Pods_WhisperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhisperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		831271051FDAFF8500E66063 /* MessagesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesHandler.swift; sourceTree = "<group>"; };
 		8B6CF3D00C6951E068BCF6D5 /* Pods-Whisper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whisper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whisper/Pods-Whisper.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		195630841FD81E4800BB857E /* Whisper */ = {
 			isa = PBXGroup;
 			children = (
+				6AA610671FDFF882008023F7 /* key.swift */,
 				19E5EDF61FD984EA009FC100 /* Plugins */,
 				191F76E51FD96B890076E041 /* Controller */,
 				191F76E41FD96B830076E041 /* View */,
@@ -557,6 +560,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				191F76E71FD96BDE0076E041 /* SignInViewController.swift in Sources */,
+				6AA610681FDFF882008023F7 /* key.swift in Sources */,
 				1970B9BC1FDADA5F00E6F9CD /* MessageViewController.swift in Sources */,
 				831271061FDAFF8500E66063 /* MessagesHandler.swift in Sources */,
 				6AA55A5D1FDFDA2A001F0D5E /* EncryptDecrypt.swift in Sources */,
@@ -736,6 +740,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2BCPHA2A96;
 				INFOPLIST_FILE = Whisper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.me.Whisper;
@@ -751,6 +756,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2BCPHA2A96;
 				INFOPLIST_FILE = Whisper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.me.Whisper;

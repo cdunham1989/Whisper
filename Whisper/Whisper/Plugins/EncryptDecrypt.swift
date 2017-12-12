@@ -11,24 +11,29 @@ import RNCryptor
 import CryptoSwift
 
 
-@IBAction func encyptPressed(_ sender: Any) {   //ibaction action needs to link sign up button
-    let input = stringToEn.text  /// strgin input needs to become password string inpout
-    let key = keyEn.text  /// eventually key needs to be hardcoded and hidden in gitignore
+class EncryptDecrypt {
+    
+    let key = Key()
+
+func encryptPressed(password: String) {   //ibaction action needs to linked sign up button
+    let input = password /// strgin input needs to become password string inpout
+    let key = self.key  /// eventually key needs to be hardcoded and hidden in gitignore
     let iv = "gqLOHUioQ0QjhuvI"  // eventually key needs to be hardcoded and hidden in gitignore
     let en = try! input!.aesEncrypt(key!, iv: iv)
-    outputEn.text = en
-    
-    
+    return en
 }
-@IBAction func descyptPressed(_ sender: Any) {   // dont need right now
-    let input = stringToDes.text
-    let key = keyDes.text
-    let iv = "gqLOHUioQ0QjhuvI"
+    
+ func descryptPressed(password: String) {   // dont need right now
+    let input = password
+    let key = self.key  /// eventually key needs to be hardcoded and hidden in gitignore
+    let iv = "gqLOHUioQ0QjhuvI" // eventually key needs to be hardcoded and hidden in gitignore
     let des = try! input!.aesDecrypt(key!, iv: iv)
-    outputDes.text = des
+    return des
     
 }
 
+}
+    
 extension String{
     func aesEncrypt(_ key: String, iv: String) throws -> String {
         let data = self.data(using: .utf8)!
@@ -45,3 +50,5 @@ extension String{
         
     }
 }
+    
+

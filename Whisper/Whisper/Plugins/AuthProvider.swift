@@ -23,8 +23,8 @@ class AuthProvider {
     
     private static let _instance = AuthProvider();
     
-    var cryptoswift = CryptoSwift()
-
+    let encryptDecrypt = EncryptDecrypt()
+    
     static var Instance: AuthProvider {
         return _instance;
     }
@@ -33,7 +33,10 @@ class AuthProvider {
     
     func login(email: String, password: String, loginHandler: LoginHandler?) {
         /// check password matches hash
-        Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+        /// encrypt password
+        let encryptedPassword = encryptDecrypt.encryptPressed(password: String)
+        
+        Auth.auth().signIn(withEmail: email, password: encryptedPassword, completion: { (user, error) in
                 
                 if error != nil {
                     self.handleErrors(err: error! as NSError, loginHandler: loginHandler);
@@ -44,11 +47,10 @@ class AuthProvider {
     } //login func
     
     func signUp(email: String, password: String, loginHandler: LoginHandler?) {
-        /// encrypt password here
-    
-        let encryptedPassword = cryptoswift.encrypt(text: password)
         
-        //
+        /// encrypt password
+        let encryptedPassword = encryptDecrypt.encryptPressed(password: String)
+        
         Auth.auth().createUser(withEmail: email, password: encryptedPassword!, completion: { (user, error) in
             
             if error != nil {
