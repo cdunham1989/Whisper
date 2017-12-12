@@ -1,0 +1,6 @@
+[submodule "Whisper/CryptoSwift"]
+	path = Whisper/CryptoSwift
+	url = https://github.com/krzyzanowskim/CryptoSwift.git
+[submodule "Whisper/Whisper/CryptoSwift"]
+	path = Whisper/Whisper/CryptoSwift
+	url = https://github.com/krzyzanowskim/CryptoSwift.git

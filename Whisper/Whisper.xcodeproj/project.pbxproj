@@ -28,6 +28,8 @@
 		19E5EDFA1FD9AAF9009FC100 /* DBProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5EDF91FD9AAF9009FC100 /* DBProvider.swift */; };
 		19E5EDFC1FD9AE58009FC100 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5EDFB1FD9AE58009FC100 /* Constants.swift */; };
 		19E5EDFE1FD9B959009FC100 /* DBProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5EDFD1FD9B959009FC100 /* DBProviderTests.swift */; };
+		6AA55A5D1FDFDA2A001F0D5E /* EncryptDecrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA55A5C1FDFDA2A001F0D5E /* EncryptDecrypt.swift */; };
+		6AA610681FDFF882008023F7 /* key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA610671FDFF882008023F7 /* key.swift */; };
 		831271061FDAFF8500E66063 /* MessagesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831271051FDAFF8500E66063 /* MessagesHandler.swift */; };
 		BE7C5EE64FDA8AF89BF42770 /* Pods_WhisperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0807CA13377DEA786CC594D4 /* Pods_WhisperUITests.framework */; };
 /* End PBXBuildFile section */
@@ -80,6 +82,7 @@
 		195630A71FD81E4800BB857E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1970B9BB1FDADA5F00E6F9CD /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		19747B601FDAB23E00F957B8 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		1986C25D1FE01A1A0008CE68 /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B2B1CA1FD859680067686C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		19B642841FD8229700EF5166 /* MessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTests.swift; sourceTree = "<group>"; };
 		19B642861FD822B200EF5166 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -93,6 +96,8 @@
 		3375D35140B927A0AC0F42C0 /* Pods-WhisperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhisperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhisperTests/Pods-WhisperTests.release.xcconfig"; sourceTree = "<group>"; };
 		3B807CC2A75CBECFBF4AEB65 /* Pods-WhisperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhisperUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhisperUITests/Pods-WhisperUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5CB22BF02806F06491463C4B /* Pods-WhisperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhisperUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhisperUITests/Pods-WhisperUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6AA55A5C1FDFDA2A001F0D5E /* EncryptDecrypt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptDecrypt.swift; sourceTree = "<group>"; };
+		6AA610671FDFF882008023F7 /* key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = key.swift; sourceTree = "<group>"; };
 		74A1DA636E9450C99FD2201C /* Pods_WhisperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhisperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		831271051FDAFF8500E66063 /* MessagesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesHandler.swift; sourceTree = "<group>"; };
 		8B6CF3D00C6951E068BCF6D5 /* Pods-Whisper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whisper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whisper/Pods-Whisper.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +185,7 @@
 		195630841FD81E4800BB857E /* Whisper */ = {
 			isa = PBXGroup;
 			children = (
+				6AA610671FDFF882008023F7 /* key.swift */,
 				19E5EDF61FD984EA009FC100 /* Plugins */,
 				191F76E51FD96B890076E041 /* Controller */,
 				191F76E41FD96B830076E041 /* View */,
@@ -221,6 +227,7 @@
 				19E5EDF71FD984FF009FC100 /* AuthProvider.swift */,
 				19E5EDF91FD9AAF9009FC100 /* DBProvider.swift */,
 				831271051FDAFF8500E66063 /* MessagesHandler.swift */,
+				6AA55A5C1FDFDA2A001F0D5E /* EncryptDecrypt.swift */,
 			);
 			path = Plugins;
 			sourceTree = "<group>";
@@ -229,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				191CB32D1FDEAD4A00B30E36 /* Starscream.framework */,
+				1986C25D1FE01A1A0008CE68 /* CryptoSwift.framework */,
 				D402C6D80EAE078F7C580090 /* Pods_Whisper.framework */,
 				74A1DA636E9450C99FD2201C /* Pods_WhisperTests.framework */,
 				0807CA13377DEA786CC594D4 /* Pods_WhisperUITests.framework */,
@@ -486,21 +494,25 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Whisper/Pods-Whisper-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac-f0850809/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/RNCryptor/RNCryptor.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNCryptor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -572,8 +584,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				191F76E71FD96BDE0076E041 /* SignInViewController.swift in Sources */,
+				6AA610681FDFF882008023F7 /* key.swift in Sources */,
 				1970B9BC1FDADA5F00E6F9CD /* MessageViewController.swift in Sources */,
 				831271061FDAFF8500E66063 /* MessagesHandler.swift in Sources */,
+				6AA55A5D1FDFDA2A001F0D5E /* EncryptDecrypt.swift in Sources */,
 				19B642871FD822B200EF5166 /* Message.swift in Sources */,
 				19747B611FDAB23E00F957B8 /* Conversation.swift in Sources */,
 				19E5EDF81FD984FF009FC100 /* AuthProvider.swift in Sources */,
@@ -750,6 +764,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2BCPHA2A96;
 				INFOPLIST_FILE = Whisper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.me.Whisper;
@@ -765,6 +780,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2BCPHA2A96;
 				INFOPLIST_FILE = Whisper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.me.Whisper;

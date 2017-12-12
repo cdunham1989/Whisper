@@ -36,7 +36,9 @@ class SignInViewController: UIViewController {
         
         if UsernameTextField.text != "" && PasswordTextField.text != "" {
             
-            AuthProvider.Instance.login(email: UsernameTextField.text!, password: PasswordTextField.text!, loginHandler: { ( message) in
+        let encryptedPassword = EncryptDecrypt.Instance.encryptPressed(password: PasswordTextField.text!)
+
+            AuthProvider.Instance.login(email: UsernameTextField.text!, password: encryptedPassword, loginHandler: { ( message) in
                     if message != nil {
                         self.alertTheUser(title: "Problem with authentication", message: message!);
                     } else {
@@ -55,7 +57,9 @@ class SignInViewController: UIViewController {
         
         if UsernameTextField.text != "" && PasswordTextField.text != "" {
             
-            AuthProvider.Instance.signUp(email: UsernameTextField.text!, password: PasswordTextField.text!, loginHandler: { ( message ) in
+            let encryptedPassword = EncryptDecrypt.Instance.encryptPressed(password: PasswordTextField.text!)
+            
+            AuthProvider.Instance.signUp(email: UsernameTextField.text!, password: encryptedPassword, loginHandler: { ( message ) in
                 
                 if message != nil {
                     self.alertTheUser(title: "Problem creating the user", message: message!)
@@ -78,6 +82,8 @@ class SignInViewController: UIViewController {
         alert.addAction(ok);
         present(alert, animated: true, completion: nil);
     }
+    
+
     
 } // class
 
