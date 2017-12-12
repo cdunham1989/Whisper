@@ -55,9 +55,9 @@ class SignInViewController: UIViewController {
         
         if UsernameTextField.text != "" && PasswordTextField.text != "" {
             
-            EncryptDecrypt.Instance.encryptPressed(password: PasswordTextField.text!)
+            let encryptedPassword = EncryptDecrypt.Instance.encryptPressed(password: PasswordTextField.text!)
             
-            AuthProvider.Instance.signUp(email: UsernameTextField.text!, password: PasswordTextField.text!, loginHandler: { ( message ) in
+            AuthProvider.Instance.signUp(email: UsernameTextField.text!, password: encryptedPassword, loginHandler: { ( message ) in
                 
                 if message != nil {
                     self.alertTheUser(title: "Problem creating the user", message: message!)
