@@ -17,16 +17,23 @@ class ConversationsViewControllerUITests: XCTestCase {
         continueAfterFailure = false
         app.launch()
         
-//        app.textFields["Username"].tap()
-//        app.textFields["Username"].typeText("testuser@whisper.com")
-//        app.secureTextFields["Password"].tap()
-//        app.secureTextFields["Password"].typeText("testpassword")
-//        app.buttons["Signup"].tap()
+        app.textFields["Username"].tap()
+        app.textFields["Username"].typeText("testuser@whisper.com")
+        app.secureTextFields["Password"].tap()
+        app.secureTextFields["Password"].typeText("testpassword")
+        app.buttons["Signup"].tap()
     }
     
     override func tearDown() {
         super.tearDown()
     }
     
+//    func testConversationsNavBarShows() {
+//        XCTAssertTrue(app.staticTexts["Conversations"].exists)
+//    }
+//
+//    func testConversationsNavBarButton() {
+//        XCTAssertTrue(app.staticTexts["Logout"].exists)
+//    }
 }
 

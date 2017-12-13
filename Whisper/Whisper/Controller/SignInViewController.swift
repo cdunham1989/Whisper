@@ -82,9 +82,6 @@ class SignInViewController: UIViewController {
         alert.addAction(ok);
         present(alert, animated: true, completion: nil);
     }
-    
-
-    
 } // class
 
 

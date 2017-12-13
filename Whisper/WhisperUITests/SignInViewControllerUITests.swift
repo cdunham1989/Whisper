@@ -17,7 +17,6 @@ class SignInViewControllerUITests: XCTestCase {
         super.setUp()
         continueAfterFailure = false
         app.launch()
-        
     }
     
     override func tearDown() {
@@ -38,45 +37,64 @@ class SignInViewControllerUITests: XCTestCase {
         app.textFields["Username"].tap()
         app.textFields["Username"].typeText("testuser@whisper.com")
         app.buttons["Sign up"].tap()
-        XCTAssertEqual(app.alerts.title, "Username and password are required")
+        XCTAssert(app.alerts["Username and password are required"].exists)
     }
-    
+
     func testSignUpWithOnlyPassword() {
-        app.textFields["Password"].tap()
-        app.textFields["Password"].typeText("testpassword")
+        app.secureTextFields["Password"].tap()
+        app.secureTextFields["Password"].typeText("testpassword")
         app.buttons["Sign up"].tap()
-        XCTAssertEqual(app.alerts.title, "Username and password are required")
+        XCTAssert(app.alerts["Username and password are required"].exists)
     }
-    
+
     func testSignUpWithNoUsernameOrPassword() {
         app.buttons["Sign up"].tap()
-        XCTAssertEqual(app.alerts.title, "Username and password are required")
+        XCTAssert(app.alerts["Username and password are required"].exists)
     }
-    
+
     func testLoginWithOnlyUsername() {
         app.textFields["Username"].tap()
         app.textFields["Username"].typeText("testuser@whisper.com")
         app.buttons["Log in"].tap()
-        XCTAssertEqual(app.alerts.title, "Username and password are required")
+        XCTAssert(app.alerts["Username and password are required"].exists)
     }
     
     func testLoginWithOnlyPassword() {
-        app.textFields["Password"].tap()
-        app.textFields["Password"].typeText("testpassword")
+        app.secureTextFields["Password"].tap()
+        app.secureTextFields["Password"].typeText("testpassword")
         app.buttons["Log in"].tap()
-        XCTAssertEqual(app.alerts.title, "Username and password are required")
+        XCTAssert(app.alerts["Username and password are required"].exists)
     }
     
     func testLoginWithNoUsernameOrPassword() {
         app.buttons["Log in"].tap()
-        XCTAssertEqual(app.alerts.title, "Username and password are required")
+        XCTAssert(app.alerts["Username and password are required"].exists)
     }
     
-    //login with incorrect username
+    func testLoginWithIncorrectUsername() {
+        app.textFields["Username"].tap()
+        app.textFields["Username"].typeText("testuser@whispr.com")
+        app.secureTextFields["Password"].tap()
+        app.secureTextFields["Password"].typeText("testpassword")
+        app.buttons["Log in"].tap()
+        XCTAssert(app.alerts["Problem with authentication"].exists)
+    }
+
+    func testLoginWithIncorrectPassword() {
+        app.textFields["Username"].tap()
+        app.textFields["Username"].typeText("testuser@whisper.com")
+        app.secureTextFields["Password"].tap()
+        app.secureTextFields["Password"].typeText("testpasword")
+        app.buttons["Log in"].tap()
+        XCTAssert(app.alerts["Problem with authentication"].exists)
+    }
     
-    //login with incorrect password
-    
-    //signup with password < 6 characters
-    
-    //signup with username without @whisper.com
+    func testLoginWithPasswordLessThanSixCharacters() {
+        app.textFields["Username"].tap()
+        app.textFields["Username"].typeText("testuser@whisper.com")
+        app.secureTextFields["Password"].tap()
+        app.secureTextFields["Password"].typeText("testp")
+        app.buttons["Log in"].tap()
+        XCTAssert(app.alerts["Problem with authentication"].exists)
+    }
 }
