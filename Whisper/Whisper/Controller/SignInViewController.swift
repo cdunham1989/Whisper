@@ -55,16 +55,20 @@ class SignInViewController: UIViewController {
         
         if UsernameTextField.text != "" && PasswordTextField.text != "" {
             
-            let encryptedPassword = EncryptDecrypt.Instance.encryptPressed(password: PasswordTextField.text!)
-            
-            AuthProvider.Instance.signUp(email: UsernameTextField.text!, password: encryptedPassword, loginHandler: { ( message ) in
+            if ((PasswordTextField.text?.count)! < 6) {
+                alertTheUser(title: "Password too short", message: "Please enter a password of six characters or more");
+            } else {
+                let encryptedPassword = EncryptDecrypt.Instance.encryptPressed(password: PasswordTextField.text!)
                 
-                if message != nil {
-                    self.alertTheUser(title: "Problem creating the user", message: message!)
-                } else {
-                    self.successfulSignIn()
-                }
-            })
+                AuthProvider.Instance.signUp(email: UsernameTextField.text!, password: encryptedPassword, loginHandler: { ( message ) in
+                    
+                    if message != nil {
+                        self.alertTheUser(title: "Problem creating the user", message: message!)
+                    } else {
+                        self.successfulSignIn()
+                    }
+                })
+            }
             
         } else {
             alertTheUser(title: "Email is required", message: "Enter email in email field");

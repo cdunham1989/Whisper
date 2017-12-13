@@ -10,13 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whisper/Controller/MessageViewController.swift"
-            timestampString = "534860238.024823"
+            timestampString = "534865655.209035"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
-            landmarkName = "backToConversations(_:)"
-            landmarkType = "7">
+            startingLineNumber = "97"
+            endingLineNumber = "97">
             <Actions>
                <BreakpointActionProxy
                   ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">

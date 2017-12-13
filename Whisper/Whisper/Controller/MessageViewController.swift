@@ -43,7 +43,6 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
         self.navigationItem.title = receiverName
     }
 
-    
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageDataForItemAt indexPath: IndexPath!) -> JSQMessageData! {
         return messages[indexPath.item]
     }
@@ -73,7 +72,6 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
         return cell;
     }
 
-    
     func messageReceived(senderId: String, senderName: String, receiverName: String, text: String) {
         if ((senderName == senderDisplayName) && (receiverName == self.receiverName)) || ((senderName == self.receiverName) && (receiverName == senderDisplayName)) {
             let decryptedText = EncryptDecrypt.Instance.decryptPressed(messageBody: text)
@@ -92,9 +90,7 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
         finishSendingMessage();
     }
     
-    
     @IBAction func backToConversations(_ sender: Any) {
         dismiss(animated: true, completion: nil);
     }
-    
 }
