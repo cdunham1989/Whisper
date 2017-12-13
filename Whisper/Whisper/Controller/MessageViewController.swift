@@ -120,15 +120,18 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
     
     func messageReceived(senderId: String, senderName: String, receiverName: String, text: String) {
         if ((senderName == senderDisplayName) && (receiverName == self.receiverName)) || ((senderName == self.receiverName) && (receiverName == senderDisplayName)) {
-            messages.append(JSQMessage(senderId: senderId, displayName: senderName, text: text))
+            let decryptedText = EncryptDecrypt.Instance.decryptPressed(messageBody: text)
+            messages.append(JSQMessage(senderId: senderId, displayName: senderName, text: decryptedText))
         }
         collectionView.reloadData();
     }
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         collectionView.reloadData();
-//        MessagesHandler.Instance.sendMessage(senderId: senderId,senderName: senderDisplayName, text: text);
-        socket.write(string: JSQToJson(messageSenderName: senderDisplayName, messageReceiverName: receiverName, messageText: text, messageError: false));
+        
+        let encryptedText = EncryptDecrypt.Instance.encryptPressed(password: text!)
+
+        socket.write(string: JSQToJson(messageSenderName: senderDisplayName, messageReceiverName: receiverName, messageText: encryptedText, messageError: false));
         finishSendingMessage();
     }
     
