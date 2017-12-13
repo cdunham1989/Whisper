@@ -31,6 +31,10 @@ class WebSocketHandler: WebSocketDelegate {
         socket.write(string: string);
     }
     
+    func disconnect() {
+        socket.disconnect(forceTimeout: 0)
+    }
+    
     func websocketDidConnect(socket: WebSocketClient) {
         print("websocket is connected")
         socket.write(string: JSONHandler.Instance.convertToJSON(messageSenderName: AuthProvider.Instance.userEmailStripped(), messageReceiverName: "", messageText: "", messageError: false))
@@ -43,7 +47,6 @@ class WebSocketHandler: WebSocketDelegate {
     func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
         persistJSON(msg: text);
         print("got some text: \(text)")
-        //        collectionView.reloadData();
     }
     
     func websocketDidReceiveData(socket: WebSocketClient, data: Data) {

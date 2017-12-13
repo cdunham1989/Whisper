@@ -57,6 +57,7 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
     
     @IBAction func logOutButton(_ sender: Any) {
         if AuthProvider.Instance.logOut() {
+            WebSocketHandler.Instance.disconnect();
             dismiss(animated: true, completion: nil);
         }
     }
