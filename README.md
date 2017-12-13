@@ -74,7 +74,7 @@ So that I know my password is secure,
 I want my password to be encrypted before storing it on the database
 ```
 
- **Features Would Add Given More Time**
+ **Features We Would Add Given More Time**
 
 ```
 As a user,
