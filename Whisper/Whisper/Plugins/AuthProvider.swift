@@ -22,17 +22,14 @@ struct LoginErrorCode {
 class AuthProvider {
     
     private static let _instance = AuthProvider();
+    var userName = "";
     
     static var Instance: AuthProvider {
         return _instance;
     }
     
-    var userName = "";
-    
     func login(email: String, password: String, loginHandler: LoginHandler?) {
-        
         Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
-                
                 if error != nil {
                     self.handleErrors(err: error! as NSError, loginHandler: loginHandler);
                 } else {
@@ -42,9 +39,7 @@ class AuthProvider {
     }
     
     func signUp(email: String, password: String, loginHandler: LoginHandler?) {
-        
         Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
-            
             if error != nil {
                 self.handleErrors(err: error! as NSError, loginHandler: loginHandler);
             } else {
@@ -55,15 +50,7 @@ class AuthProvider {
             }
         });
     }
-    
-    func isLoggedIn() -> Bool {
-        if Auth.auth().currentUser != nil {
-            return true;
-        }
-        return false;
-    }
-    
-    
+
     func logOut() -> Bool {
         if Auth.auth().currentUser != nil {
             do {
@@ -92,7 +79,6 @@ class AuthProvider {
     }
 
     private func handleErrors(err: NSError, loginHandler: LoginHandler?) {
-        
         if let errCode = AuthErrorCode(rawValue: err.code) {
             switch errCode {
                 

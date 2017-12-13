@@ -74,7 +74,6 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
     }
 
     func messageReceived(senderId: String, senderName: String, receiverName: String, text: String) {
-        print("inside messageReceived")
         if ((senderName == senderDisplayName) && (receiverName == self.receiverName)) || ((senderName == self.receiverName) && (receiverName == senderDisplayName)) {
             let decryptedText = EncryptDecrypt.Instance.decryptPressed(messageBody: text)
             messages.append(JSQMessage(senderId: senderId, displayName: senderName, text: decryptedText))
