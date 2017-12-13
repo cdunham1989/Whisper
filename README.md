@@ -11,7 +11,7 @@
 
 For our final project at Makers Academy we have built a mobile messaging app with end-to-end encryption. As we wanted to build an iOS app, we used Swift and the XCode IDE. We also used Ruby developed our own server with a websocket. This allowed our app to sustain bi-directional communication between app users in real time. This server is hosted remotely on [Heroku](https://www.heroku.com/). 
 
-The repository for the web socket we built and used can be found [here](https://github.com/hugosykes/Demo-Chat-App)
+The github repository for the web socket we built and used can be found [here](https://github.com/hugosykes/Demo-Chat-App).
 
 ## Working Methodologies
 
