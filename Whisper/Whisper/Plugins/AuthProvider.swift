@@ -23,8 +23,6 @@ class AuthProvider {
     
     private static let _instance = AuthProvider();
     
-//    let encryptDecrypt = EncryptDecrypt();
-    
     static var Instance: AuthProvider {
         return _instance;
     }
@@ -41,7 +39,7 @@ class AuthProvider {
                     loginHandler?(nil);
                 }
         });
-    } //login func
+    }
     
     func signUp(email: String, password: String, loginHandler: LoginHandler?) {
         
@@ -56,14 +54,14 @@ class AuthProvider {
                 };
             }
         });
-    } // sign up
+    }
     
     func isLoggedIn() -> Bool {
         if Auth.auth().currentUser != nil {
             return true;
         }
         return false;
-    } //is logged in 
+    }
     
     
     func logOut() -> Bool {
@@ -76,7 +74,7 @@ class AuthProvider {
             }
         }
         return false;
-    } //log out
+    }
     
     func userID() -> String {
         return Auth.auth().currentUser!.uid;
@@ -98,23 +96,19 @@ class AuthProvider {
         if let errCode = AuthErrorCode(rawValue: err.code) {
             switch errCode {
                 
-            case .invalidEmail:
-                loginHandler?(LoginErrorCode.INVALID_USERNAME);
-                break;
-            case .emailAlreadyInUse:
-                loginHandler?(LoginErrorCode.USERNAME_IN_USE);
-                break;
-            case .weakPassword:
-                loginHandler?(LoginErrorCode.WEAK_PASSWORD);
-                break;
-            case .wrongPassword:
-                loginHandler?(LoginErrorCode.WRONG_PASSWORD);
-                break;
-            default:
-                loginHandler?(LoginErrorCode.PROBLEM_CONNECTING);
-                break;
-        }//error code
+                case .invalidEmail:
+                    loginHandler?(LoginErrorCode.INVALID_USERNAME);
+                    break;
+                case .emailAlreadyInUse:
+                    loginHandler?(LoginErrorCode.USERNAME_IN_USE);
+                    break;
+                case .wrongPassword:
+                    loginHandler?(LoginErrorCode.WRONG_PASSWORD);
+                    break;
+                default:
+                    loginHandler?(LoginErrorCode.PROBLEM_CONNECTING);
+                    break;
+            }
         }
     }
-    
-} //class
+}
