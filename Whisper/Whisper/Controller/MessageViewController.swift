@@ -10,7 +10,7 @@ import UIKit
 import JSQMessagesViewController
 import Starscream
 
-class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate, WebSocketDelegate {
+class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate {
     
     private var messages = [JSQMessage]();
     
@@ -24,13 +24,10 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var receiverName = "";
-    
-    var socket = WebSocket(url: URL(string: "ws://whisper-server2017.herokuapp.com/")!)
+    var handle: UInt = 0;
 
     override func viewDidLoad() {
         super.viewDidLoad();
-        socket.delegate = self;
-        socket.connect();
         
         self.senderId = AuthProvider.Instance.userID();
         self.senderDisplayName = AuthProvider.Instance.userEmailStripped();
@@ -41,52 +38,12 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
         collectionView.backgroundColor = UIColor.black;
         collectionView.collectionViewLayout.messageBubbleFont = UIFont.init(name: "Courier", size: 22);
         
-        MessagesHandler.Instance.observeMessages();
+        handle = MessagesHandler.Instance.observeMessages();
         MessagesHandler.Instance.delegate = self;
         
         self.navigationItem.title = receiverName
     }
-    
-    // web socket functions
-    
-    func websocketDidConnect(socket: WebSocketClient) {
-        print("websocket is connected")
-        socket.write(string: JSQToJson(messageSenderName: senderDisplayName, messageReceiverName: "", messageText: "", messageError: false))
-    }
-    
-    func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
-        print("websocket is disconnected: \(String(describing: error?.localizedDescription))")
-    }
-    
-    func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
-        persistJSON(msg: text);
-        print("got some text: \(text)")
-        collectionView.reloadData();
-    }
-    
-    func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
-        print("got some data: \(data.count)")
-    }
-    
-    func persistJSON(msg: String) {
-        struct ReceivedMessage: Codable {
-            var senderName : String;
-            var receiverName : String;
-            var text : String;
-            var error : Bool;
-        }
-        
-        let decoder = JSONDecoder();
-        let jsonData = msg.data(using: .utf8)!
-        let parsedJSON = try? decoder.decode(ReceivedMessage.self, from: jsonData);
-        let data: Dictionary<String, Any> = [Constants.SENDER_ID: senderId, Constants.SENDER_NAME: parsedJSON!.senderName, Constants.RECEIVER_NAME: parsedJSON!.receiverName, Constants.TEXT: parsedJSON!.text];
-        if (parsedJSON?.text != "") { DBProvider.Instance.messagesRef.childByAutoId().setValue(data) }
-    }
-    // end of web socket functions
-    
-    
-    // COLLECTION VIEW FUNCTIONS
-    
+
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageDataForItemAt indexPath: IndexPath!) -> JSQMessageData! {
         return messages[indexPath.item]
     }
@@ -105,7 +62,7 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, attributedTextForMessageBubbleTopLabelAt indexPath: IndexPath!) -> NSAttributedString! {
         return messages[indexPath.item].senderId == senderId ? nil : NSAttributedString(string: messages[indexPath.item].senderDisplayName)
-    } // display username above message youve received
+    }
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForMessageBubbleTopLabelAt indexPath: IndexPath!) -> CGFloat {
         return messages[indexPath.item].senderId == senderId ? 0 : 15
@@ -115,49 +72,28 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate,
         let cell = super.collectionView(collectionView, cellForItemAt: indexPath) as! JSQMessagesCollectionViewCell
         return cell;
     }
-    
-    // END COLLECTION VIEW FUNCTIONS
-    
+
     func messageReceived(senderId: String, senderName: String, receiverName: String, text: String) {
+        print("inside messageReceived")
         if ((senderName == senderDisplayName) && (receiverName == self.receiverName)) || ((senderName == self.receiverName) && (receiverName == senderDisplayName)) {
-            messages.append(JSQMessage(senderId: senderId, displayName: senderName, text: text))
+            let decryptedText = EncryptDecrypt.Instance.decryptPressed(messageBody: text)
+            messages.append(JSQMessage(senderId: senderId, displayName: senderName, text: decryptedText))
         }
         collectionView.reloadData();
     }
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         collectionView.reloadData();
-//        MessagesHandler.Instance.sendMessage(senderId: senderId,senderName: senderDisplayName, text: text);
-        socket.write(string: JSQToJson(messageSenderName: senderDisplayName, messageReceiverName: receiverName, messageText: text, messageError: false));
+        
+        let encryptedText = EncryptDecrypt.Instance.encryptPressed(password: text!)
+
+        WebSocketHandler.Instance.send(string: JSONHandler.Instance.convertToJSON(messageSenderName: senderDisplayName, messageReceiverName: receiverName, messageText: encryptedText, messageError: false));
+        
         finishSendingMessage();
     }
     
-    func JSQToJson(messageSenderName: String, messageReceiverName: String, messageText: String, messageError: Bool) -> String {
-        var jsonString = "";
-        struct Message: Codable {
-            var senderName: String;
-            var receiverName: String;
-            var text: String;
-            var error: Bool;
-        }
-        let message = Message(senderName: messageSenderName, receiverName: messageReceiverName, text: messageText, error: messageError)
-        let jsonEncoder = JSONEncoder()
-        do {
-            let jsonData = try jsonEncoder.encode(message)
-            jsonString = String(data: jsonData, encoding: .utf8)!
-        }
-        catch {
-        }
-        return jsonString
-    }
-    
-    deinit {
-        socket.disconnect(forceTimeout: 0)
-        socket.delegate = nil
-    }
-    
     @IBAction func backToConversations(_ sender: Any) {
+        DBProvider.Instance.messagesRef.removeObserver(withHandle: handle);
         dismiss(animated: true, completion: nil);
     }
-    
 }
