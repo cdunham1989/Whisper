@@ -38,9 +38,6 @@ class EncryptDecrypt {
             return des
         }
     
-    
-
-    
 }
     
 extension String{
