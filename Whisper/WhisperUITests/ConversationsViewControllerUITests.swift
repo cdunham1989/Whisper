@@ -16,24 +16,33 @@ class ConversationsViewControllerUITests: XCTestCase {
         super.setUp()
         continueAfterFailure = false
         app.launch()
-        
-        app.textFields["Username"].tap()
-        app.textFields["Username"].typeText("testuser@whisper.com")
-        app.secureTextFields["Password"].tap()
-        app.secureTextFields["Password"].typeText("testpassword")
-        app.buttons["Signup"].tap()
     }
     
     override func tearDown() {
         super.tearDown()
     }
     
-//    func testConversationsNavBarShows() {
-//        XCTAssertTrue(app.staticTexts["Conversations"].exists)
-//    }
-//
-//    func testConversationsNavBarButton() {
-//        XCTAssertTrue(app.staticTexts["Logout"].exists)
-//    }
+    func testLogoutButtonWorks() {
+        app.textFields["Username"].tap()
+        app.textFields["Username"].typeText("testkeep@whisper.com")
+        app.secureTextFields["Password"].tap()
+        app.secureTextFields["Password"].typeText("password")
+        app.buttons["Log in"].tap()
+        app.buttons["Logout"].tap()
+        XCTAssert(app.buttons["Sign up"].exists)
+    }
+
+    func testConversationsLinkOpensChatThread() {
+        let cell = app.tables.cells.staticTexts["paul"]
+
+        app.textFields["Username"].tap()
+        app.textFields["Username"].typeText("testkeep@whisper.com")
+        app.secureTextFields["Password"].tap()
+        app.secureTextFields["Password"].typeText("password")
+        app.buttons["Log in"].tap()
+        cell.tap()
+        XCTAssertTrue(app.staticTexts["paul"].exists)
+  }
+    
 }
 
