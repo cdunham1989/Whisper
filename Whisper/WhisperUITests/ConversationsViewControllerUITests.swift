@@ -15,20 +15,18 @@ class ConversationsViewControllerUITests: XCTestCase {
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
-        XCUIApplication().launch()
+        app.launch()
         
-        app.textFields["Username"].tap()
-        app.textFields["Username"].typeText("testuser@whisper.com")
-        app.secureTextFields["Password"].tap()
-        app.secureTextFields["Password"].typeText("testpassword")
-        app.buttons["Signup"].tap()
+//        app.textFields["Username"].tap()
+//        app.textFields["Username"].typeText("testuser@whisper.com")
+//        app.secureTextFields["Password"].tap()
+//        app.secureTextFields["Password"].typeText("testpassword")
+//        app.buttons["Signup"].tap()
     }
     
     override func tearDown() {
         super.tearDown()
     }
-    
-    
     
 }
 
