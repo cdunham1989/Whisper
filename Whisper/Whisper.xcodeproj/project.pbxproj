@@ -23,6 +23,7 @@
 		19B642851FD8229700EF5166 /* MessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B642841FD8229700EF5166 /* MessageTests.swift */; };
 		19B642871FD822B200EF5166 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B642861FD822B200EF5166 /* Message.swift */; };
 		19B642891FD84EA900EF5166 /* ViewControllerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B642881FD84EA900EF5166 /* ViewControllerUnitTests.swift */; };
+		19B6428B1FD84FD100EF5166 /* SignInViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B6428A1FD84FD100EF5166 /* SignInViewControllerUITests.swift */; };
 		19B6428B1FD84FD100EF5166 /* ViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B6428A1FD84FD100EF5166 /* ViewControllerUITests.swift */; };
 		19D098291FE148A300594AAF /* WebSocketHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D098281FE148A300594AAF /* WebSocketHandler.swift */; };
 		19E5EDF81FD984FF009FC100 /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5EDF71FD984FF009FC100 /* AuthProvider.swift */; };
@@ -33,6 +34,7 @@
 		6AA55A5D1FDFDA2A001F0D5E /* EncryptDecrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA55A5C1FDFDA2A001F0D5E /* EncryptDecrypt.swift */; };
 		6AA610681FDFF882008023F7 /* key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA610671FDFF882008023F7 /* key.swift */; };
 		831271061FDAFF8500E66063 /* MessagesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831271051FDAFF8500E66063 /* MessagesHandler.swift */; };
+		833E5A681FE1332D008981CF /* ConversationsViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833E5A671FE1332D008981CF /* ConversationsViewControllerUITests.swift */; };
 		BE7C5EE64FDA8AF89BF42770 /* Pods_WhisperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0807CA13377DEA786CC594D4 /* Pods_WhisperUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +91,7 @@
 		19B642841FD8229700EF5166 /* MessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTests.swift; sourceTree = "<group>"; };
 		19B642861FD822B200EF5166 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		19B642881FD84EA900EF5166 /* ViewControllerUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerUnitTests.swift; sourceTree = "<group>"; };
+		19B6428A1FD84FD100EF5166 /* SignInViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewControllerUITests.swift; sourceTree = "<group>"; };
 		19B6428A1FD84FD100EF5166 /* ViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerUITests.swift; sourceTree = "<group>"; };
 		19D098281FE148A300594AAF /* WebSocketHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketHandler.swift; sourceTree = "<group>"; };
 		19E5EDF71FD984FF009FC100 /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
@@ -104,6 +107,7 @@
 		6AA610671FDFF882008023F7 /* key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = key.swift; sourceTree = "<group>"; };
 		74A1DA636E9450C99FD2201C /* Pods_WhisperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhisperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		831271051FDAFF8500E66063 /* MessagesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesHandler.swift; sourceTree = "<group>"; };
+		833E5A671FE1332D008981CF /* ConversationsViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewControllerUITests.swift; sourceTree = "<group>"; };
 		8B6CF3D00C6951E068BCF6D5 /* Pods-Whisper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whisper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whisper/Pods-Whisper.debug.xcconfig"; sourceTree = "<group>"; };
 		A0D953D6963C78C3950E356A /* Pods-WhisperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhisperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhisperTests/Pods-WhisperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D402C6D80EAE078F7C580090 /* Pods_Whisper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whisper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,7 +224,8 @@
 			isa = PBXGroup;
 			children = (
 				195630A71FD81E4800BB857E /* Info.plist */,
-				19B6428A1FD84FD100EF5166 /* ViewControllerUITests.swift */,
+				19B6428A1FD84FD100EF5166 /* SignInViewControllerUITests.swift */,
+				833E5A671FE1332D008981CF /* ConversationsViewControllerUITests.swift */,
 			);
 			path = WhisperUITests;
 			sourceTree = "<group>";
@@ -620,7 +625,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19B6428B1FD84FD100EF5166 /* ViewControllerUITests.swift in Sources */,
+				19B6428B1FD84FD100EF5166 /* SignInViewControllerUITests.swift in Sources */,
+				833E5A681FE1332D008981CF /* ConversationsViewControllerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

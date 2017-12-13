@@ -47,7 +47,7 @@ class SignInViewController: UIViewController {
                 })
                 
             } else {
-                alertTheUser(title: "Username is required", message: "Enter username in username field");
+                alertTheUser(title: "Username and password are required", message: "Please enter a valid username (...@whisper.com) and password (minimum 6 characters) in the respective fields");
             }
     } //login func
     
@@ -71,7 +71,7 @@ class SignInViewController: UIViewController {
             }
             
         } else {
-            alertTheUser(title: "Email is required", message: "Enter email in email field");
+            alertTheUser(title: "Username and password are required", message: "Please enter a valid username (...@whisper.com) and password (minimum 6 characters) in the respective fields");
         }
     }//sign up func
    
@@ -89,9 +89,7 @@ class SignInViewController: UIViewController {
         self.performSegue(withIdentifier: self.CONVERSATIONS_SEGUE, sender: nil)
         WebSocketHandler.Instance.connect();
     }
-    
 
-    
 } // class
 
 
