@@ -24,6 +24,7 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var receiverName = "";
+    var handle: UInt = 0;
 
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -37,7 +38,7 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
         collectionView.backgroundColor = UIColor.black;
         collectionView.collectionViewLayout.messageBubbleFont = UIFont.init(name: "Courier", size: 22);
         
-        MessagesHandler.Instance.observeMessages();
+        handle = MessagesHandler.Instance.observeMessages();
         MessagesHandler.Instance.delegate = self;
         
         self.navigationItem.title = receiverName
@@ -73,6 +74,7 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
     }
 
     func messageReceived(senderId: String, senderName: String, receiverName: String, text: String) {
+        print("inside messageReceived")
         if ((senderName == senderDisplayName) && (receiverName == self.receiverName)) || ((senderName == self.receiverName) && (receiverName == senderDisplayName)) {
             let decryptedText = EncryptDecrypt.Instance.decryptPressed(messageBody: text)
             messages.append(JSQMessage(senderId: senderId, displayName: senderName, text: decryptedText))
@@ -91,6 +93,7 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
     }
     
     @IBAction func backToConversations(_ sender: Any) {
+        DBProvider.Instance.messagesRef.removeObserver(withHandle: handle);
         dismiss(animated: true, completion: nil);
     }
 }
