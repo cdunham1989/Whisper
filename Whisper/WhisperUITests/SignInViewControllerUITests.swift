@@ -23,9 +23,14 @@ class SignInViewControllerUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testSignInViewDisplay() {
+    func testSignInViewDisplayButtons() {
         XCTAssert(app.buttons["Sign up"].exists)
         XCTAssert(app.buttons["Log in"].exists)
+    }
+    
+    func testSignInViewDisplayTextFields() {
+        XCTAssert(app.textFields["Username"].exists)
+        XCTAssert(app.secureTextFields["Password"].exists)
     }
 
 }

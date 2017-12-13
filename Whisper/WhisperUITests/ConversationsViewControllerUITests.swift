@@ -17,8 +17,8 @@ class ConversationsViewControllerUITests: XCTestCase {
         continueAfterFailure = false
         XCUIApplication().launch()
         
-        app.textFields["Email"].tap()
-        app.textFields["Email"].typeText("testuser@whisper.com")
+        app.textFields["Username"].tap()
+        app.textFields["Username"].typeText("testuser@whisper.com")
         app.secureTextFields["Password"].tap()
         app.secureTextFields["Password"].typeText("testpassword")
         app.buttons["Signup"].tap()
