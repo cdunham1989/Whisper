@@ -45,32 +45,47 @@ extension String{
     func aesEncrypt(_ key: String, iv: String) throws -> String {
         var result = ""
         do {
-            
+            let data = self.data(using: .utf8)
             let key: [UInt8] = Array(key.utf8) as [UInt8]
-            
-            let aes = try! AES(key: key, blockMode: .ECB, padding: .pkcs7) //AES128 .ECB pkcs7
-            let encrypted = try aes.encrypt(key)
-            
-            result = encrypted.toHexString()
-            
+            let encrypted = try! AES(key: key, blockMode: .ECB, padding: .pkcs7).encrypt([UInt8](data!))
+//            let aes = try! AES(key: key, blockMode: .ECB, padding: .pkcs7) //AES128 .ECB pkcs7
+            let encryptedData = Data(encrypted)
+
+            result = encryptedData.toHexString()
+
         } catch {
             print(error)
         }
-        
         return result
     }
+    
+//    func aesEncrypt(_ key: String, iv: String) throws -> String {
+//        let data = self.data(using: .utf8)!
+//        let encrypted = try! AES(key: key, iv: iv, blockMode: .CBC, padding: .pkcs7).encrypt([UInt8](data))
+//        let encryptedData = Data(encrypted)
+//        return encryptedData.base64EncodedString()
+//    }
+//
+//    func aesDecrypt(_ key: String, iv: String) throws -> String {
+//        let data = Data(base64Encoded: self)!
+//        let decrypted = try! AES(key: key, iv: iv, blockMode: .CBC, padding: PKCS7()).decrypt([UInt8](data))
+//        let decryptedData = Data(decrypted)
+//        return String(bytes: decryptedData.bytes, encoding: .utf8) ?? "Could not decrypt"
+//
+//    }
+
     
     func aesDecrypt(_ key: String, iv: String) throws -> String {
         var result = ""
         do {
             let hexString = self
             let key: [UInt8] = Array(key.utf8) as [UInt8]
-            
+
             let aes = try! AES(key: key, blockMode: .ECB, padding: .pkcs7) //AES128 .ECB pkcs7
             let decrypted = try aes.decrypt(Array(hex: hexString))
-            
+
             result = String(data: Data(decrypted), encoding: .utf8) ?? ""
-            
+
         } catch {
             print(error)
         }
