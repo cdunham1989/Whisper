@@ -61,7 +61,5 @@ class ConversationViewController: UIViewController, UITableViewDelegate, UITable
             dismiss(animated: true, completion: nil);
         }
     }
-
 }
- //class
 

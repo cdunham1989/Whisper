@@ -22,15 +22,8 @@ class MessagesHandler {
     static var Instance: MessagesHandler {
         return _instance;
     }
-//
-//    func sendMessage(senderId: String, senderName: String, text: String) {
-//        let data: Dictionary<String, Any> = [Constants.SENDER_ID: senderId, Constants.SENDER_NAME: senderName, Constants.TEXT: text];
-//
-//        DBProvider.Instance.messagesRef.childByAutoId().setValue(data);
-//    }
-    
+
     func observeMessages() -> DatabaseHandle {
-        print("in observeMessages");
         return DBProvider.Instance.messagesRef.observe(DataEventType.childAdded) {
             (snapshot: DataSnapshot) in
             if let data = snapshot.value as? NSDictionary {
@@ -47,4 +40,4 @@ class MessagesHandler {
         }
     }
     
-} //class
+}

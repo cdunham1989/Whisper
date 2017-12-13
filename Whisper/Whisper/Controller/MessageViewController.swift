@@ -53,7 +53,7 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
     }
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAt indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource! {
-        return messages[indexPath.item].senderId == senderId ? outgoingBubble : incomingBubble
+        return messages[indexPath.item].senderId == self.senderId ? outgoingBubble : incomingBubble
     }
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {
@@ -74,7 +74,6 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
     }
 
     func messageReceived(senderId: String, senderName: String, receiverName: String, text: String) {
-        print("inside messageReceived")
         if ((senderName == senderDisplayName) && (receiverName == self.receiverName)) || ((senderName == self.receiverName) && (receiverName == senderDisplayName)) {
             let decryptedText = EncryptDecrypt.Instance.decryptPressed(messageBody: text)
             messages.append(JSQMessage(senderId: senderId, displayName: senderName, text: decryptedText))
@@ -84,11 +83,8 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         collectionView.reloadData();
-        
         let encryptedText = EncryptDecrypt.Instance.encryptPressed(password: text!)
-
         WebSocketHandler.Instance.send(string: JSONHandler.Instance.convertToJSON(messageSenderName: senderDisplayName, messageReceiverName: receiverName, messageText: encryptedText, messageError: false));
-        
         finishSendingMessage();
     }
     
