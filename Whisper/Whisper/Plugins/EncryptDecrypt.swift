@@ -44,31 +44,12 @@ class EncryptDecrypt {
 }
     
 extension String{
-    func aesDecrypt(_ key: String, iv: String) throws -> String {
-        var result = ""
-        let keyClass = Key()
-        do {
-            let hexString = self
-            let key: [UInt8] = Array(keyClass.key.utf8) as [UInt8]
-            
-            let aes = try! AES(key: key, blockMode: .ECB, padding: .pkcs7) //AES128 .ECB pkcs7
-            let decrypted = try aes.decrypt(Array(hex: hexString))
-            
-            result = String(data: Data(decrypted), encoding: .utf8) ?? ""
-            
-        } catch {
-            print(error)
-        }
-        return result
-    }
-    
     
     func aesEncrypt(_ key: String, iv: String) throws -> String {
         var result = ""
-        let keyClass = Key()
         do {
             
-            let key: [UInt8] = Array(keyClass.key.utf8) as [UInt8]
+            let key: [UInt8] = Array(key.utf8) as [UInt8]
             
             let aes = try! AES(key: key, blockMode: .ECB, padding: .pkcs7) //AES128 .ECB pkcs7
             let encrypted = try aes.encrypt(key)
@@ -81,6 +62,25 @@ extension String{
         
         return result
     }
+    
+    func aesDecrypt(_ key: String, iv: String) throws -> String {
+        var result = ""
+        do {
+            let hexString = self
+            let key: [UInt8] = Array(key.utf8) as [UInt8]
+            
+            let aes = try! AES(key: key, blockMode: .ECB, padding: .pkcs7) //AES128 .ECB pkcs7
+            let decrypted = try aes.decrypt(Array(hex: hexString))
+            
+            result = String(data: Data(decrypted), encoding: .utf8) ?? ""
+            
+        } catch {
+            print(error)
+        }
+        return result
+    }
+    
+
     
      }
     
