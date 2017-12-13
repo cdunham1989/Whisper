@@ -83,11 +83,8 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
         collectionView.reloadData();
-        
         let encryptedText = EncryptDecrypt.Instance.encryptPressed(password: text!)
-
         WebSocketHandler.Instance.send(string: JSONHandler.Instance.convertToJSON(messageSenderName: senderDisplayName, messageReceiverName: receiverName, messageText: encryptedText, messageError: false));
-        
         finishSendingMessage();
     }
     

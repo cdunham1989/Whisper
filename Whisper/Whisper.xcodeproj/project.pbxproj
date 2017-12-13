@@ -139,13 +139,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		191F76E41FD96B830076E041 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		191F76E51FD96B890076E041 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,7 +177,6 @@
 				6AA610671FDFF882008023F7 /* key.swift */,
 				19E5EDF61FD984EA009FC100 /* Plugins */,
 				191F76E51FD96B890076E041 /* Controller */,
-				191F76E41FD96B830076E041 /* View */,
 				191F76E31FD96B7C0076E041 /* Model */,
 				195630851FD81E4800BB857E /* AppDelegate.swift */,
 				195630891FD81E4800BB857E /* Main.storyboard */,
