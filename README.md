@@ -1,10 +1,15 @@
 # Whisper
 
-## Project Outline
+## Authors
 
-Our aim is to create a mobile messaging app with end-to-end encryption. We decided to create an up for iOS using Swift and XCode. For this application to work as we intend we have also created a websocket server in Ruby which we passed the messages through as they were being sent by the application.
+* Lucy Borthwick
+* [Chris Dunham](https://github.com/cdunham1989)
+* [Hugo Sykes](https://github.com/hugosykes)
+* [Oliver Pople](https://github.com/oliverpople)
 
-Currently we are working on encrypting the messages so that the end-to-end encryption goal will be met.
+## Project Overview
+
+For our final project at Makers Academy we have built a mobile messaging app with end-to-end encryption. As we wanted to build an iOS app, we used Swift and the XCode IDE. We also used Ruby developed our own server with a websocket. This allowed our app to sustain bi-directional communication between app users in real time. This server is hosted remotely on [Heroku](https://www.heroku.com/).
 
 ## Working Methodologies
 
@@ -12,16 +17,16 @@ Currently we are working on encrypting the messages so that the end-to-end encry
 * XP Values
 * Daily Stand-ups (10:00) and Retros (17:30)
 * Pairing (Aiming to switch driver every 15-20 minutes)
-* Use of Branches
+* A separate git branches for each new feature
 * Consulting team before merging pull requests
-* TDD (BDD) everything! Aiming for 100% test coverage
+* TDD & BDD. Aiming for 100% test coverage
 * Focusing on communication with an open dialogue policy
 
 ## Tech Stack
 
 * Swift
 * XCTest (App-side Unit and Feature Tests)
-* Firebase
+* Firebase (database)
 * Ruby
 * Sinatra
 * RSpec
@@ -34,15 +39,15 @@ Currently we are working on encrypting the messages so that the end-to-end encry
 ```
 As a user,
 So that I can use Whisper,
-I need to be able to create a username
+I need to create a username
 
 As a user,
 So that I can use Whisper,
-I need to be able to sign in with my username
+I need to sign in with my username
 
 As a user,
 So that I can start a conversation,
-I need to be able to view a list of my current conversations
+I need to view a list of my current conversations
 
 As a user,
 So that I can start a conversation,
@@ -62,8 +67,16 @@ I would like to see the username of the user next to the message
 ```
 As a user,
 So that my messages are completely secure,
-I want my messages to be end-to-end encrypted
+I want my messages to be encrypted
 
+As a user,
+So that I know my password is secure,
+I want my password to be encrypted before storing it on the database
+```
+
+ **Features Would Add Given More Time**
+
+```
 As a user,
 So that my identity is completely secure,
 I want my IP address to be encrypted
@@ -91,21 +104,18 @@ I want to see a 'read' label under my message
 As a user,
 So I know when I sent a message,
 I want to see a timestamp on the message
-
-As a user,
-So that I know my password is secure,
-I want Whisper to generate a password for me
 ```
 
 ## Running The App Locally
 
 * Clone the repository
-* Run the app by opening the project file in Xcode and clicking the play button.
+```
+$ git clone git@github.com:lucyborthwick/Whisper.git
+```
+* Run the app by opening the project file in Xcode, running pod install and clicking the play button.
+```
+$ cd ../Whisper
+$ open Whisper.xcworkspace
+$ pod install
+```
 * Run our tests by pressing `cmd + u` whilst the project is open in Xcode.
-
-## Collaborators
-
-* Lucy Borthwick
-* [Chris Dunham](https://github.com/cdunham1989)
-* [Hugo Sykes](https://github.com/hugosykes)
-* [Oliver Pople](https://github.com/oliverpople)
