@@ -53,7 +53,7 @@ class MessageViewController: JSQMessagesViewController, MessageReceivedDelegate 
     }
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAt indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource! {
-        return messages[indexPath.item].senderId == senderId ? outgoingBubble : incomingBubble
+        return messages[indexPath.item].senderId == self.senderId ? outgoingBubble : incomingBubble
     }
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {
