@@ -42,9 +42,7 @@ class SignInViewController: UIViewController {
                     if message != nil {
                         self.alertTheUser(title: "Problem with authentication", message: message!);
                     } else {
-                        self.UsernameTextField.text = "";
-                        self.PasswordTextField.text = "";
-                        self.performSegue(withIdentifier: self.CONVERSATIONS_SEGUE, sender: nil)
+                        self.successfulSignIn()
                     }
                 })
                 
@@ -64,9 +62,7 @@ class SignInViewController: UIViewController {
                 if message != nil {
                     self.alertTheUser(title: "Problem creating the user", message: message!)
                 } else {
-                    self.UsernameTextField.text = "";
-                    self.PasswordTextField.text = "";
-                    self.performSegue(withIdentifier: self.CONVERSATIONS_SEGUE, sender: nil)
+                    self.successfulSignIn()
                 }
             })
             
@@ -81,6 +77,13 @@ class SignInViewController: UIViewController {
         let ok = UIAlertAction(title: "OK", style: .default, handler: nil);
         alert.addAction(ok);
         present(alert, animated: true, completion: nil);
+    }
+    
+    private func successfulSignIn() {
+        self.UsernameTextField.text = "";
+        self.PasswordTextField.text = "";
+        self.performSegue(withIdentifier: self.CONVERSATIONS_SEGUE, sender: nil)
+        WebSocketHandler.Instance.connect();
     }
     
 
