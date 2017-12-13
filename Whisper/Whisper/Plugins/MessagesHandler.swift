@@ -29,8 +29,9 @@ class MessagesHandler {
 //        DBProvider.Instance.messagesRef.childByAutoId().setValue(data);
 //    }
     
-    func observeMessages() {
-        DBProvider.Instance.messagesRef.observe(DataEventType.childAdded) {
+    func observeMessages() -> DatabaseHandle {
+        print("in observeMessages");
+        return DBProvider.Instance.messagesRef.observe(DataEventType.childAdded) {
             (snapshot: DataSnapshot) in
             if let data = snapshot.value as? NSDictionary {
                 if let senderID = data[Constants.SENDER_ID] as? String {
@@ -44,7 +45,6 @@ class MessagesHandler {
                 }
             }
         }
-    } //observe messages -- at the moment every single message sent reloads into a new conversation. ie. a conversation between person 1 and person 2 will appear when person 3 starts a new conversation with person 4. need to fix this. 
-    
+    }
     
 } //class

@@ -21,27 +21,24 @@ class EncryptDecrypt {
     
     let keyClass = Key()
     
-        func encryptPressed(password: String) -> String {
-            let input = password
-            let key = keyClass.key
-            let iv = "gqLOHUioQ0QjhuvI"
-            let en = try! input.aesEncrypt(key, iv: iv)
-            return en
+    func encryptPressed(password: String) -> String {
+        let input = password
+        let key = keyClass.key
+        let iv = "gqLOHUioQ0QjhuvI"
+        let en = try! input.aesEncrypt(key, iv: iv)
+        return en
     }
     
-
-        func decryptPressed(messageBody: String) -> String {
-            let input = messageBody
-            let key = keyClass.key
-            let iv = "gqLOHUioQ0QjhuvI"
-            let des = try! input.aesDecrypt(key, iv: iv)
-            return des
-        }
-    
+    func decryptPressed(messageBody: String) -> String {
+        let input = messageBody
+        let key = keyClass.key
+        let iv = "gqLOHUioQ0QjhuvI"
+        let des = try! input.aesDecrypt(key, iv: iv)
+        return des
+    }
 }
     
 extension String{
-    
     func aesEncrypt(_ key: String, iv: String) throws -> String {
         var result = ""
         do {
@@ -54,7 +51,6 @@ extension String{
         }
         return result
     }
-
     
     func aesDecrypt(_ key: String, iv: String) throws -> String {
         var result = ""
@@ -72,7 +68,6 @@ extension String{
         }
         return result
     }
-    
 }
     
 

@@ -21,7 +21,7 @@ class DBProviderTests: XCTestCase {
         super.tearDown()
     }
     
-    func testReturnValueOfDBRef() {
-        XCTAssertEqual(db.returnDBRef, "https://whisper-afaf1.firebaseio.com/")
-    }
+//    func testReturnValueOfDBRef() {
+//        XCTAssertEqual(db.returnDBRef, "https://whisper-afaf1.firebaseio.com/")
+//    }
 }
