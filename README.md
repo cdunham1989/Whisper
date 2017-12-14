@@ -9,7 +9,7 @@
 
 ## Project Overview
 
-For our final project at Makers Academy we have built a mobile messaging app with end-to-end encryption. As we wanted to build an iOS app, we used Swift and the XCode IDE. We also used Ruby developed our own server with a websocket. This allowed our app to sustain bi-directional communication between app users in real time. This server is hosted remotely on [Heroku](http://whisper-server2017.herokuapp.com/). 
+For our final project at Makers Academy we have built a mobile messaging app with end-to-end encryption. As we wanted to build an iOS app, we used Swift and the XCode IDE. We also used Ruby developed our own server with a websocket. This allowed our app to sustain bi-directional communication between app users in real time. This server is hosted remotely on [Heroku](http://whisper-server2017.herokuapp.com/).
 
 The github repository for the web socket we built and used can be found [here](https://github.com/hugosykes/Demo-Chat-App).
 
@@ -121,3 +121,11 @@ $ open Whisper.xcworkspace
 $ pod install
 ```
 * Run our tests by pressing `cmd + u` whilst the project is open in Xcode.
+
+## Architecture
+
+[alt text](https://ibb.co/idniVR!)
+
+## UI
+
+[alt text](https://ibb.co/b6fsPm)[alt text](https://ibb.co/ftNNPm)
