@@ -94,7 +94,7 @@ class SignInViewControllerUITests: XCTestCase {
         app.textFields["Username"].typeText("testuser@whisper.com")
         app.secureTextFields["Password"].tap()
         app.secureTextFields["Password"].typeText("testp")
-        app.buttons["Log in"].tap()
-        XCTAssert(app.alerts["Problem with authentication"].exists)
+        app.buttons["Sign up"].tap()
+        XCTAssert(app.alerts["Password too short"].exists)
     }
 }
