@@ -124,8 +124,8 @@ $ pod install
 
 ## Architecture
 
-![alt text](./whisper/Simplified Architecture.png)
+![Architecture](Simplified Architecture.png)
 
 ## UI
 
-![alt text](./whisper/UI 1.png)![alt text](./whisper/UI 2.png)
+![UI1](UI 1.png)![UI2](UI 2.png)
