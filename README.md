@@ -124,8 +124,8 @@ $ pod install
 
 ## Architecture
 
-[alt text](https://ibb.co/idniVR!)
+![alt text](./whisper/Simplified Architecture.png)
 
 ## UI
 
-[alt text](https://ibb.co/b6fsPm)[alt text](https://ibb.co/ftNNPm)
+![alt text](./whisper/UI 1.png)![alt text](./whisper/UI 2.png)
