@@ -42,4 +42,23 @@ class EncryptDecryptTests: XCTestCase {
         let decryptedMessage = encrypt.decryptPressed(messageBody: encryptedMessage)
         XCTAssertEqual(text, decryptedMessage)
     }
+    
+    func testDecryptmessageLengthHello() {
+        let text = "hello"
+        let encryptMessage = encrypt.encryptPressed(password: text)
+        XCTAssertEqual(encryptMessage.count, 32)
+    }
+    
+    func testDecryptmessageLengthHelloMonkeySixty() {
+        let text = "hellomonkeysixty"
+        let encryptMessage = encrypt.encryptPressed(password: text)
+        XCTAssertEqual(encryptMessage.count, 64)
+    }
+    
+    func testDecryptmessageLengthHelloMonkeySixtyNine() {
+        let text = "hellomonkeysixtyninehellomonkeysixtynine"
+        let encryptMessage = encrypt.encryptPressed(password: text)
+        XCTAssertEqual(encryptMessage.count, 96)
+    }
+    
 }
