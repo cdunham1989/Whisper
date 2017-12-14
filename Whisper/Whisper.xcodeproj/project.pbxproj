@@ -20,9 +20,7 @@
 		1970B9BC1FDADA5F00E6F9CD /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1970B9BB1FDADA5F00E6F9CD /* MessageViewController.swift */; };
 		19747B611FDAB23E00F957B8 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19747B601FDAB23E00F957B8 /* Conversation.swift */; };
 		19B2B1CB1FD859680067686C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19B2B1CA1FD859680067686C /* GoogleService-Info.plist */; };
-		19B642851FD8229700EF5166 /* MessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B642841FD8229700EF5166 /* MessageTests.swift */; };
-		19B642871FD822B200EF5166 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B642861FD822B200EF5166 /* Message.swift */; };
-		19B642891FD84EA900EF5166 /* ViewControllerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B642881FD84EA900EF5166 /* ViewControllerUnitTests.swift */; };
+		19CE3A1B1FE28F7500D11D4E /* JsonHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE3A1A1FE28F7500D11D4E /* JsonHandlerTests.swift */; };
 		19D098291FE148A300594AAF /* WebSocketHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D098281FE148A300594AAF /* WebSocketHandler.swift */; };
 		19E5EDF81FD984FF009FC100 /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5EDF71FD984FF009FC100 /* AuthProvider.swift */; };
 		19E5EDFA1FD9AAF9009FC100 /* DBProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E5EDF91FD9AAF9009FC100 /* DBProvider.swift */; };
@@ -86,9 +84,7 @@
 		19747B601FDAB23E00F957B8 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		1986C25D1FE01A1A0008CE68 /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B2B1CA1FD859680067686C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		19B642841FD8229700EF5166 /* MessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTests.swift; sourceTree = "<group>"; };
-		19B642861FD822B200EF5166 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		19B642881FD84EA900EF5166 /* ViewControllerUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerUnitTests.swift; sourceTree = "<group>"; };
+		19CE3A1A1FE28F7500D11D4E /* JsonHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHandlerTests.swift; sourceTree = "<group>"; };
 		19D098281FE148A300594AAF /* WebSocketHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketHandler.swift; sourceTree = "<group>"; };
 		19E5EDF71FD984FF009FC100 /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 		19E5EDF91FD9AAF9009FC100 /* DBProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBProvider.swift; sourceTree = "<group>"; };
@@ -200,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				1956309C1FD81E4800BB857E /* Info.plist */,
+				19CE3A1A1FE28F7500D11D4E /* JsonHandlerTests.swift */,
 			);
 			path = WhisperTests;
 			sourceTree = "<group>";
@@ -334,6 +331,7 @@
 					};
 					195630951FD81E4800BB857E = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 195630811FD81E4800BB857E;
 					};
@@ -598,6 +596,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19CE3A1B1FE28F7500D11D4E /* JsonHandlerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,11 +789,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WhisperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.me.WhisperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Whisper.app/Whisper";
@@ -807,6 +808,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WhisperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
