@@ -124,8 +124,8 @@ $ pod install
 
 ## Architecture
 
-<img src=Simplified Architecture.png>
+<img src=whisper/Simplified Architecture.png width='500'>
 
 ## UI
 
-<img src=UI 1.png><img src=UI 2.png>
+<img src=whisper/UI 1.png width='300'><img src=whisper/UI 2.png width='300'>
