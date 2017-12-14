@@ -12,6 +12,7 @@ import XCTest
 class EncryptDecryptTests: XCTestCase {
     
     let encrypt = EncryptDecrypt();
+    let handler = JSONHandler();
     
     override func setUp() {
         super.setUp()
@@ -26,6 +27,19 @@ class EncryptDecryptTests: XCTestCase {
         let encryptedPassword = encrypt.encryptPressed(password: password);
         XCTAssertFalse(password == encryptedPassword)
     }
-
     
+    func testEncryptMessage() {
+        let text = "Hello"
+        let encryptedMessage = encrypt.encryptPressed(password: text)
+        let encryptedJson = handler.convertToJSON(messageSenderName: "Lucy", messageReceiverName: "Hugo", messageText: encryptedMessage, messageError: false)
+        let jsonOutput = "{\"senderName\":\"Lucy\",\"receiverName\":\"Hugo\",\"error\":false,\"text\":\"Hello\"}"
+        XCTAssertFalse(encryptedJson == jsonOutput)
+    }
+    
+    func testDecryptMessage() {
+        let text = "Hello"
+        let encryptedMessage = encrypt.encryptPressed(password: text)
+        let decryptedMessage = encrypt.decryptPressed(messageBody: encryptedMessage)
+        XCTAssertEqual(text, decryptedMessage)
+    }
 }
