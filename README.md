@@ -124,8 +124,8 @@ $ pod install
 
 ## Architecture
 
-![Architecture](Simplified Architecture.png)
+<img src=Simplified Architecture.png>
 
 ## UI
 
-![UI1](UI 1.png)![UI2](UI 2.png)
+<img src=UI 1.png><img src=UI 2.png>
